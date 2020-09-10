@@ -7,8 +7,9 @@ use App\Http\Controllers\Controller;
 
 class MypageController extends Controller
 {
-    public function index()
+    public function add()
     {
-        return view('admin.mypage.index');
+        return view('admin.mypage.list');
     }
+    
 }

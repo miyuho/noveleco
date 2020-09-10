@@ -7,8 +7,8 @@ use App\Http\Controllers\Controller;
 
 class BookmarkController extends Controller
 {
-    public function index()
+    public function add()
     {
-        return view('admin.bookmark.index');
+        return view('admin.bookmark.list');
     }
 }

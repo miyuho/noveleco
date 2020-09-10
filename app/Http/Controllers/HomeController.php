@@ -29,3 +29,4 @@ class HomeController extends Controller
         return view('home');
     }
 }
+//後で複数のワードで検索できるように書き換える

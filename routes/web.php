@@ -18,25 +18,26 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index');
-//registerやloginのページへ飛ぶためのルーティングも書いておくべき？
+
 Route::get('/article', 'ArticleController@show');
-Route::get('/each-account', 'EachAccountController@index');
+Route::get('/each-account', 'EachAccountController@list');
 
 
 Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function(){
     //Route::get('', '');アカウント設定ページ
-    Route::get('profile/create', 'Admin\ProfileController@create');
+    Route::get('profile/create', 'Admin\ProfileController@add');
     Route::get('profile/edit', 'Admin\ProfileController@edit');
     
     Route::get('article', 'Admin\ArticleController@show');
-    Route::get('article/create', 'Admin\ArticleController@create');
+    Route::get('article/create', 'Admin\ArticleController@add');
     Route::get('article/edit', 'Admin\ArticleController@edit');
+    Route::post('article/create', 'Admin\ArticleController@create');
     
-    Route::get('mypage', 'Admin\MypageController@index');
+    Route::get('mypage', 'Admin\MypageController@add');
     
-    Route::get('favorite', 'Admin\FavoriteController@index');
+    Route::get('favorite', 'Admin\FavoriteController@add');
     
-    Route::get('bookmark', 'Admin\BookmarkController@index');
+    Route::get('bookmark', 'Admin\BookmarkController@add');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');

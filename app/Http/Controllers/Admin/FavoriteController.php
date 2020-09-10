@@ -7,8 +7,8 @@ use App\Http\Controllers\Controller;
 
 class FavoriteController extends Controller
 {
-    public function index()
+    public function add()
     {
-        return view('admin.favorite.index');
+        return view('admin.favorite.list');
     }
 }

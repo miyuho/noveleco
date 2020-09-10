@@ -1,0 +1,17 @@
+header {
+  background-image: url("../image/IMG_5236.jpg");
+  background-repeat: repeat-x;
+  background-size: contain;
+  height: 20vh;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f7efd2;
+  color: #7b7b7b;
+}
+
+.navbar-brand {
+  color: #fff !important;
+}
