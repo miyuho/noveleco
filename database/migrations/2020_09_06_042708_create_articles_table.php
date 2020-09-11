@@ -19,7 +19,7 @@ class CreateArticlesTable extends Migration
             $table->string ('book_title');
             $table->string ('author');
             $table->string ('subtitle');
-            $table->string ('body');
+            $table->text ('body');
             $table->string ('book_image_path')->nullable();
             $table->timestamps();
             

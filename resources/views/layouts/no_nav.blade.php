@@ -12,7 +12,7 @@
 
         <link rel="dns-prefetch" href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
         <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
-        <link href="{{ secure_asset('css/nolist.css') }}" rel="stylesheet">
+        <link href="{{ secure_asset('css/no_nav.css') }}" rel="stylesheet">
     </head>
     <body>
         <div id="app">

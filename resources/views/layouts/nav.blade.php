@@ -43,7 +43,7 @@
                                             {{ Auth::user()->name }} <span class="caret"></span>
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                            <a class="dropdown-item" href="{{ action('Admin\MypageController@index') }}">マイページ</a>
+                                            <a class="dropdown-item" href="{{ action('Admin\MypageController@add') }}">マイページ</a>
                                             <a class="dropdown-item" href="#">アカウント設定</a>
 
                                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
