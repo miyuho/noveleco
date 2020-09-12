@@ -17,9 +17,9 @@
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index')->name('index');
 
-Route::get('/article', 'ArticleController@show');
+Route::get('/article', 'ArticleController@show')->name('article.show');
 Route::get('/each-account', 'EachAccountController@list');
 
 

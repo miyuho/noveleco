@@ -4,10 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\User;
+use App\Article;
+use Storage;
+
 class ArticleController extends Controller
 {
-    public function show()
+    public function show(Request $request)
     {
-        return view('article.show');
+        $article = Article::find($request->id);
+        if (empty($article)) {
+            abort(404);
+        }
+        
+        return view('article.show', [ 'article' => $article ]);
+        
     }
 }

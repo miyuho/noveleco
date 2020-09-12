@@ -16,10 +16,10 @@ a {
   text-decoration: none;
   color: inherit;
 }
-a:hover {
-　text-decoration: none;
-　color: inherit;
-}
+/*a:hover {*/
+　/*text-decoration: none;*/
+ /* color: inherit;*/
+/*}*/
 
 .navbar {
   height: 20vh;
@@ -32,9 +32,12 @@ a:hover {
   color: #fff !important;
 }
 
-.nav-link {
+.navber-nav {
   position: absolute;
   bottom: 0;
+}
+
+.nav-link {
   color: #fff !important;
 }
 
@@ -42,3 +45,8 @@ a:hover {
   opacity: 0.7;
   cursor: pointer;
 }
+
+/*.card-img {*/
+/*  max-width: 100%;*/
+/*  height: auto;*/
+/*}*/

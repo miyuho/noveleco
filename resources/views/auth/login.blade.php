@@ -6,10 +6,12 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8 mt-4">
+            
             <div class="card">
-
                 <div class="card-body">
-                    <h2 class="content-title border-bottom pb-1 mb-4">ログイン</h2>
+                    <div class="border-bottom pb-1 mb-4">
+                        <h2 class="content-title">ログイン</h2>
+                    </div>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 

@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use App\Article;
 use Carbon\Carbon;
+use Storage;
 
 
 class ArticleController extends Controller
@@ -25,7 +26,7 @@ class ArticleController extends Controller
         $form = $request->all();
         
         if (isset($form['book_image_path'])) {
-            $path = $request->file('book_image_path')->store('public/image');
+            $path = $request->file('book_image_path')->store('image', 'public');
             $article->book_image_path = basename($path);
         }else {
             $article->book_image_path = null;
@@ -41,7 +42,7 @@ class ArticleController extends Controller
         */
         
         unset($form['_token']);
-        unset($form['image']);
+        unset($form['book_image_path']);
         
         $article->fill($form);
         $article->user_id = $request->user()->id;
