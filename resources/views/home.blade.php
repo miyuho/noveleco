@@ -18,8 +18,10 @@
         </div>
         
         <div class="col-md-10 mt-3">
+            
             @foreach ( $posts as $article )
-                <div class="row card no_gutters">
+            <a class="card no_gutters" href="{{ action('ArticleController@show') }}">
+                <div class="row">
                     <div class="col-md-3 m-4">
                         @if ( $article->book_image_path != null )
                             <!--<img src="{{ Storage::url($article->book_image_path) }}" alt="本の画像" class="card-img img-thumbnail">-->
@@ -28,16 +30,18 @@
                             <img src="{{ asset('/image/no_image.png') }}" alt="画像がありません" class="card-img img-thumbnail">
                         @endif
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-7">
                         <div class="card-body">
                             <h4 class="card-title">{{ \Str::limit ( $article->book_title, 100 ) }}</h4>
-                            <p class="card-text">{{ \Str::limit ( $article->author, 100 ) }}</p>
-                            <p class="card-text subtitle">{{ \Str::limit ( $article->subtitle, 100 ) }}</p>
-                            <p class="card-text">{{ \Str::limit ( $article->body, 250 ) }}</p>
+                            <p class="card-title">{{ \Str::limit ( $article->author, 100 ) }}</p>
+                            <p class="card-title subtitle">{{ \Str::limit ( $article->subtitle, 100 ) }}</p>
+                            <p class="card-title">{{ \Str::limit ( $article->body, 250 ) }}</p>
                         </div>
                     </div>
                 </div>
+            </a>
             @endforeach
+            <!--該当するものが無ければメッセージを表示させる-->
         </div>
         
     </div>

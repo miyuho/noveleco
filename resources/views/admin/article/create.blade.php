@@ -8,7 +8,9 @@
         <div class="col-md-10 mt-3">
             <div class="card">
                 <div class="card-body">
-                    <h2 class="content-title border-bottom pb-1 mb-4">新規作成</h2>
+                    <div class="border-bottom pb-1 mb-4">
+                        <h2 class="content-title">新規作成</h2>
+                    </div>
                     <form action="{{ action('Admin\ArticleController@create') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         
@@ -30,11 +32,11 @@
                             <!-- できれば画像のプレビュー追加 -->
                             <label cass="col-md-4">
                                 <div class="ml-md-3">
-                                    <img src="{{ asset('/image/no_image.png') }}" alt="本の画像" class="select-img img-fluid img-thumbnail"></img>
+                                    <img src="{{ asset('/image/no_image.png') }}" alt="本の画像" class="select-img img-thumbnail"></img>
                                     <input type="file" class="form-control-file" name="book_image_path">
                                 </div>
                             </label>
-                            <div class="col-md-6 mb-3 float-right">
+                            <div class="col-md-6 mb-3">
                                 <div class="my-3">
                                     <input type="text" class="form-control" placeholder="本のタイトル" name="book_title" value="{{ old('book_title') }}">
                                 </div>
@@ -58,7 +60,6 @@
                     </form>
                 </div>
             </div>
-            
         </div>
     </div>
 </div>
