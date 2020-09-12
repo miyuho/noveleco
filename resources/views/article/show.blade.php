@@ -28,7 +28,8 @@
                                 <p>{{ $article->subtitle }}</p>
                             </div>
                         </div>
-                        
+                    </div>
+                    <div class="row">
                         <div class="col-12 pt-3 border-top">
                             {{ $article->body }}
                         </div>
