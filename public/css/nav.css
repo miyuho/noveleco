@@ -1,8 +1,11 @@
+@charset "UTF-8";
 header {
   background-image: url("../image/IMG_5236.jpg");
   background-repeat: repeat-x;
   background-size: contain;
   height: 20vh;
+  display: flex;
+  align-items: flex-end;
 }
 
 body {
@@ -16,25 +19,14 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
 /*a:hover {*/
-　/*text-decoration: none;*/
- /* color: inherit;*/
-/*}*/
-
-.navbar {
-  height: 20vh;
-  position: relative;
-}
-
-.navbar-brand {
-  position: absolute;
-  bottom: 0;
+　 .navbar-brand {
   color: #fff !important;
 }
 
 .navber-nav {
-  position: absolute;
-  bottom: 0;
+  color: #fff !important;
 }
 
 .nav-link {

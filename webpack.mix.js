@@ -13,8 +13,8 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
-    .sass('resources/sass/header.scss', 'public/css')
-    .sass('resources/sass/header_nolist.scss', 'public/css')
+    .sass('resources/sass/nav.scss', 'public/css')
+    .sass('resources/sass/no_nav.scss', 'public/css')
 
 .options({
      processCssUrls: false

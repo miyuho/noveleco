@@ -19,10 +19,14 @@
             <header>
                 <nav class="navbar navbar-expand-md">
                     <div class="container">
-                        <h1><a class=" navbar-brand" href="{{ url('/') }}">noveLeco</a></h1>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+                        
+                        <div>
+                            <h1><a class=" navbar-brand" href="{{ url('/') }}">noveLeco</a></h1>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                        
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
                             <ul class="navbar-nav ml-auto">
                                 @guest

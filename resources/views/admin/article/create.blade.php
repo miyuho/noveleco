@@ -49,7 +49,7 @@
                             </div>
                         </div>
                         <div class="row form-group">
-                            <div class="col-12 border-top pt-3">
+                            <div class="col-md-12 border-top pt-3">
                                 <textarea class="form-control" rows="30" placeholder="" name="body" value="{{ old('body') }}"></textarea>
                             </div>
                         </div>

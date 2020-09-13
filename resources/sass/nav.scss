@@ -1,8 +1,10 @@
 header {
-    background-image: url('../image/IMG_5236.jpg');
-    background-repeat: repeat-x;
-    background-size: contain;
-    height: 20vh;
+  background-image: url("../image/IMG_5236.jpg");
+  background-repeat: repeat-x;
+  background-size: contain;
+  height: 20vh;
+  display: flex;
+  align-items: flex-end;
 }
 
 body {
@@ -12,10 +14,40 @@ body {
   color: #7b7b7b;
 }
 
+// .container {
+//   display: flex;
+//   justify-content: space-between;
+//   width: 100vw;
+// }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/*a:hover {*/
+　/*text-decoration: none;*/
+ /* color: inherit;*/
+/*}*/
+
+
 .navbar-brand {
+  color: #fff !important;
+}
+
+.navber-nav {
   color: #fff !important;
 }
 
 .nav-link {
   color: #fff !important;
 }
+
+.select-img:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/*.card-img {*/
+/*  max-width: 100%;*/
+/*  height: auto;*/
+/*}*/

@@ -1,6 +1,6 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/css/header.css": "/css/header.css",
-    "/css/header_nolist.css": "/css/header_nolist.css"
+    "/css/nav.css": "/css/nav.css",
+    "/css/no_nav.css": "/css/no_nav.css"
 }
