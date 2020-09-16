@@ -17,9 +17,9 @@
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('index');
+Route::get('/', 'HomeController@index');
 
-Route::get('/article', 'ArticleController@show')->name('article.show');
+Route::get('/article', 'ArticleController@show');
 Route::get('/each-account', 'EachAccountController@list');
 
 
@@ -27,11 +27,15 @@ Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function(){
     //Route::get('', '');アカウント設定ページ
     Route::get('profile/create', 'Admin\ProfileController@add');
     Route::get('profile/edit', 'Admin\ProfileController@edit');
+    Route::post('profile/create', 'Admin\ProfileController@create');
+    Route::post('profile/edit', 'Admin\ProfileController@update');
     
     Route::get('article', 'Admin\ArticleController@show');
     Route::get('article/create', 'Admin\ArticleController@add');
     Route::get('article/edit', 'Admin\ArticleController@edit');
     Route::post('article/create', 'Admin\ArticleController@create');
+    Route::post('article/edit', 'Admin\ArticleController@update');
+    Route::get ('news/delete', 'Admin\ArticleController@delete');
     
     Route::get('mypage', 'Admin\MypageController@add');
     

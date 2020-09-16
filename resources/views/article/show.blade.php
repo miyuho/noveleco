@@ -8,6 +8,16 @@
         <div class="col-md-10 mt-3">
             <div class="card">
                 <div class="card-body">
+                    <!--<div class="row">-->
+                    <!--    <div class="col-md-12 pb-2">-->
+                    <!--        <a>-->
+                                <!--記事を書いたユーザーの写真と名前、aタグで囲ってユーザーページへ-->
+                    <!--        </a>-->
+                    <!--        <div class="text-right">-->
+                    <!--            {{ $article->created_at->format('Y年m月d日') }}-->
+                    <!--        </div>-->
+                    <!--    </div>-->
+                    <!--</div>-->
                     <div class="row">
                         <div class="col-md-4 mx-md-4 mb-4">
                             @if ( $article->book_image_path != null )
@@ -17,7 +27,15 @@
                             @endif
                         </div>
                         
-                        <div claas="col-md-6 mb-3">
+                        <div class="col-md-7 mb-3">
+                            <div class="text-right">
+                                <!--<a>-->
+                                <!--    記事を書いたユーザーの写真と名前、aタグで囲ってユーザーページへ-->
+                                <!--</a>-->
+                                <span class="date">
+                                    {{ $article->created_at->format('Y年m月d日') }}
+                                </span>
+                            </div>
                             <div class="my-3">
                                 <h2>{{ $article->book_title }}</h2>
                             </div>

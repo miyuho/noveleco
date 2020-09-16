@@ -25,8 +25,8 @@ class ArticleController extends Controller
         $article = new Article;
         $form = $request->all();
         
-        if (isset($form['book_image_path'])) {
-            $path = $request->file('book_image_path')->store('image', 'public');
+        if (isset($form['book_image'])) {
+            $path = $request->file('book_image')->store('image', 'public');
             $article->book_image_path = basename($path);
         }else {
             $article->book_image_path = null;
@@ -42,7 +42,7 @@ class ArticleController extends Controller
         */
         
         unset($form['_token']);
-        unset($form['book_image_path']);
+        unset($form['book_image']);
         
         $article->fill($form);
         $article->user_id = $request->user()->id;
@@ -53,20 +53,66 @@ class ArticleController extends Controller
     }
     
     
-    public function show()
+    public function show(Request $request)
     {
-        return view('admin.article.show');
+        $article = Article::find($request->id);
+        if (empty($article)) {
+            abort(404);
+        }
+        
+        return view('admin.article.show', [ 'article'=>$article ]);
     }
     
     
-    public function edit()
+    public function edit(Request $request)
     {
-        return view('admin.article.edit');
+        $article = Article::find($request->id);
+        if (empty($article)) {
+            abort(404);
+        }
+        
+        return view('admin.article.edit', [ 'article_form'=>$article ]);
     }
     
     
-    public function update()
+    public function update(Request $request)
     {
-        return redirect('admin/profile/edit');
+        $this->validate($request, Article::$rules);
+        $article = Article::find($request->id);
+        $article_form = $request->all();
+        
+        if ($request->remove == 'true'){
+            $article_form['book_image_path'] = null;
+        } elseif ($request->file('book_image')){
+            $path = $request->file('book_image')->store('public/image');
+            $article_form['book_image_path'] = basename($path);
+        } else {
+            $article_form['book_image_path'] = $article->book_image_path;
+        }
+        
+        unset($article_form['_token']);
+        unset($article_form['remove']);
+        unset($article_form['book_image']);
+        
+        $article->fill($article_form)->save();
+        
+        return view('admin.article.show', [ 'article'=>$article ]);
+    }
+    
+    
+    public function delete(Request $request)
+    {
+        $article = Article::find($request->id);
+        $article->delete();
+        return redirect('admin/mypage');
     }
 }
+
+
+// Mynewsのデリートコード
+    // public function delete(Request $request)
+    // {
+    //     $news = News::find($request->id);
+    //     $news->delete();
+    //     return redirect('admin/news/');
+    // }

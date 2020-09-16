@@ -8,6 +8,6 @@ class EachAccountController extends Controller
 {
     public function add()
     {
-        return view('each_account.list');
+        return view('each_account.index');
     }
 }

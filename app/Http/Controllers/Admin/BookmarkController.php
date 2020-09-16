@@ -9,6 +9,6 @@ class BookmarkController extends Controller
 {
     public function add()
     {
-        return view('admin.bookmark.list');
+        return view('admin.bookmark.index');
     }
 }

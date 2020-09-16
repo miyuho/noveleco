@@ -19,7 +19,7 @@
         
         <div class="col-md-10 mt-3">
             
-            @foreach ( $posts as $article )
+            @foreach ( $articles as $article )
             <a class="card no_gutters" href="{{ action('ArticleController@show', ['id' => $article->id]) }}">
                 <div class="row">
                     <div class="col-md-3 m-4">

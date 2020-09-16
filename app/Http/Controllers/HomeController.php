@@ -32,12 +32,12 @@ class HomeController extends Controller
         
         $cond_word = $request->cond_word;
         if ($cond_word != ''){
-            $posts = Article::where('book_title', $cond_word)->get();
+            $articles = Article::where('book_title', $cond_word)->get();
         } else{
-            $posts = Article::all();
+            $articles = Article::all();
         }
         
-        return view('home', ['posts'=>$posts, 'cond_word'=>$cond_word]);
+        return view('home', ['articles'=>$articles, 'cond_word'=>$cond_word]);
         
         
     }

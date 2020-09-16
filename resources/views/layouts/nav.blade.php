@@ -17,52 +17,53 @@
     <body>
         <div id="app">
             <header>
-                <nav class="navbar navbar-expand-md">
-                    <div class="container">
-                        
-                        <div>
-                            <h1><a class=" navbar-brand" href="{{ url('/') }}">noveLeco</a></h1>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
+                <div class="container">
+                    <div class=" header-nav">
+                        <div class="col-md-3">
+                            <h1><a class="header-logo" href="{{ url('/') }}">noveLeco</a></h1>
                         </div>
                         
-                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                            <ul class="navbar-nav ml-auto">
+                        <div class="col-md-4 offset-md-5">
+                            <ul class="header-right">
                                 @guest
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('register') }}">アカウント作成</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('login') }}">ログイン</a>
-                                    </li>
-                                    
-                                    @else
-                                    <li class="nav-item active">
-                                        <a class="nav-link" href="{{ action('Admin\ArticleController@add') }}">投稿する</a>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                            {{ Auth::user()->name }} <span class="caret"></span>
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                            <a class="dropdown-item" href="{{ action('Admin\MypageController@add') }}">マイページ</a>
-                                            <a class="dropdown-item" href="#">アカウント設定</a>
-                                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                    document.getElementById('logout-form').submit();">
-                                                ログアウト
-                                            </a>
-                                            
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                @csrf
-                                            </form>
+                                    <div class="row">
+                                        <div class="col-md-7 text-right">
+                                            <li class="nav-link"><a href="{{ route('register') }}">アカウント作成</a></li>
                                         </div>
-                                    </li>
+                                        <div class="col-md-5 text-right">
+                                            <li class="nav-link"><a href="{{ route('login') }}">ログイン</a></li>
+                                        </div>
+                                    </div>
+                                    @else
+                                    <div class="row">
+                                        <div class="col-md-7 text-right">
+                                            <li class="nav-link"><a href="{{ action('Admin\ArticleController@add') }}">投稿する</a></li>
+                                        </div>
+                                        <div class="col-md-5 text-right">
+                                            <li class="dropdown nav-link">
+                                                <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <a class="dropdown-item" href="{{ action('Admin\MypageController@add') }}">マイページ</a>
+                                                    <a class="dropdown-item" href="#">アカウント設定</a>
+                                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                            document.getElementById('logout-form').submit();">
+                                                        ログアウト
+                                                    </a>
+                                                    
+                                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                        @csrf
+                                                    </form>
+                                                </div>
+                                            </li>
+                                        </div>
+                                    </div>
                                 @endguest
                             </ul>
                         </div>
                     </div>
-                </nav>
+                </div>
             </header>
             
             <main class="my-4">
