@@ -20,7 +20,7 @@ class MypageController extends Controller
             abort(404);
         }
         
-        $articles = Article::where('user_id', $id)->get();
+        $articles = Article::where('user_id', $id)->orderBy('created_at','desc')->get();
         
         return view('admin.mypage.index', [ 'user'=>$user, 'articles'=>$articles ]);
     }

@@ -31,7 +31,7 @@
                             <!--</label>-->
                             <!-- できれば画像のプレビュー追加 -->
                             <div class="col-md-4">
-                                <label class="ml-md-3">
+                                <label class="ml-md-3" style="text-align:center;">
                                     @if ($article_form->book_image_path != null)
                                         <img src="{{ asset('/storage/image/'.$article_form->book_image_path) }}" alt="本の画像" class="select-img img-thumbnail">
                                         <input type="file" class="form-control-file" name="book_image">

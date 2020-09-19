@@ -14,7 +14,7 @@ header {
 
 .header-nav {
   width: 100vh;
-  height: 20vh;
+  height: 100%;
   display: inline-flex;
   align-items: flex-end;
 }

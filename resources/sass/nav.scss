@@ -40,13 +40,21 @@ header {
   list-style: none;
 }
 
-/**/
+/* 画像
+--------------------------------------------------*/
 .select-img:hover {
   opacity: 0.7;
   cursor: pointer;
+  height: 260px;
+  width: auto;
 }
 
-/*.card-img {*/
-/*  max-width: 100%;*/
-/*  height: auto;*/
-/*}*/
+.show-img {
+  height: 260px;
+  width: auto;
+}
+
+.index-img {
+  height: 200px;
+  width: auto;
+}
