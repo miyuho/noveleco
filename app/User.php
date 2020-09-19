@@ -37,6 +37,19 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
     
+    
+    /**
+     * パスワードリセット通知の送信
+     *
+     * @param  string  $token
+     * @return void
+     */
+    public function sendPasswordResetNotification($token)//パスワードリセット機能実装のため追加
+    {
+        $this->notify(new ResetPasswordNotification($token));
+    }
+    
+    
     protected $guarded = array('id');
     
     

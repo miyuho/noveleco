@@ -60,7 +60,9 @@ class ArticleController extends Controller
             abort(404);
         }
         
-        return view('admin.article.show', [ 'article'=>$article ]);
+        $user = User::find($article->user_id);
+        
+        return view('admin.article.show', [ 'article'=>$article, 'user' => $user ]);
     }
     
     
@@ -107,12 +109,3 @@ class ArticleController extends Controller
         return redirect('admin/mypage');
     }
 }
-
-
-// Mynewsのデリートコード
-    // public function delete(Request $request)
-    // {
-    //     $news = News::find($request->id);
-    //     $news->delete();
-    //     return redirect('admin/news/');
-    // }

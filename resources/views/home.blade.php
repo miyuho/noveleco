@@ -31,10 +31,10 @@
                     </div>
                     <div class="col-md-8 mt-3">
                         <div class="card-body">
-                            <h4 class="card-title">{{ \Str::limit ( $article->book_title, 100 ) }}</h4>
-                            <p class="card-title">{{ \Str::limit ( $article->author, 100 ) }}</p>
-                            <p class="card-title subtitle">{{ \Str::limit ( $article->subtitle, 100 ) }}</p>
-                            <p class="card-title">{{ \Str::limit ( $article->body, 200 ) }}</p>
+                            <h4 class="card-title">{{ \Str::limit ( $article->book_title, 50 ) }}</h4>
+                            <p class="card-title">{{ \Str::limit ( $article->author, 50 ) }}</p>
+                            <p class="card-title subtitle"><i>「{{ \Str::limit ( $article->subtitle, 100 ) }}」</i></p>
+                            <p class="card-title">{{ \Str::limit ( $article->body, 150 ) }}</p>
                         </div>
                     </div>
                 </div>

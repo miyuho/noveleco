@@ -42,11 +42,14 @@ header {
 
 /* 画像
 --------------------------------------------------*/
+.select-img {
+  height: 260px;
+  width: auto;
+}
+
 .select-img:hover {
   opacity: 0.7;
   cursor: pointer;
-  height: 260px;
-  width: auto;
 }
 
 .show-img {
@@ -57,4 +60,9 @@ header {
 .index-img {
   height: 200px;
   width: auto;
+}
+
+.icon {
+  height: 20px;
+  width:  20px;
 }

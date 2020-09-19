@@ -8,7 +8,7 @@
         <div class="col-md-10 mt-3">
             <div class="card">
                 <div class="card-body">
-                    <div class="row">
+                    <div class="row border-bottom">
                         <div class="col-md-4 mx-md-4 mb-4" style="text-align:center;">
                             @if ( $article->book_image_path != null )
                                 <img src="{{ asset('/storage/image/'.$article->book_image_path) }}" alt="本の画像" class="show-img card-img img-thumbnail ">
@@ -29,13 +29,13 @@
                                 <p>{{ $article->author }}</p>
                             </div>
                             <div class="my-3">
-                                <p>{{ $article->subtitle }}</p>
+                                <p><i>「{{ $article->subtitle }}」</i></p>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-12 pt-3 border-top">
-                            {{ $article->body }}
+                    <div class="row justify-content-center">
+                        <div class="col-11 my-5">
+                            {!! nl2br ($article->body) !!}
                         </div>
                     </div>
                     

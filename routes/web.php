@@ -20,7 +20,7 @@ Auth::routes();
 Route::get('/', 'HomeController@index');
 
 Route::get('/article', 'ArticleController@show');
-Route::get('/each-account', 'EachAccountController@list');
+Route::get('/each-account', 'EachAccountController@add');
 
 
 Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function(){

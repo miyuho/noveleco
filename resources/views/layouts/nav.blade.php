@@ -24,7 +24,7 @@
                         </div>
                         
                         <div class="col-md-4 offset-md-5">
-                            <ul class="header-right">
+                            <ul class="header-right mb-0">
                                 @guest
                                     <div class="row">
                                         <div class="col-md-7 text-right">

@@ -17,7 +17,9 @@ class ArticleController extends Controller
             abort(404);
         }
         
-        return view('article.show', [ 'article' => $article ]);
+        $user = User::find($article->user_id);
+        
+        return view('article.show', [ 'article'=>$article, 'user' => $user ]);
         
     }
 }
