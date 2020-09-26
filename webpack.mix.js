@@ -15,7 +15,6 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/nav.scss', 'public/css')
     .sass('resources/sass/no_nav.scss', 'public/css')
+    .version()
 
-.options({
-     processCssUrls: false
-  });
+    .options({ processCssUrls: false });

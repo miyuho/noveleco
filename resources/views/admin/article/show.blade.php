@@ -1,6 +1,6 @@
 @extends('layouts.nav')
 
-@section('title', '{{$article->book_title}}')
+@section('title', $article->book_title)
 
 @section('content')
 <div class="container">
@@ -35,7 +35,7 @@
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-11 my-5">
-                            {!! nl2br ($article->body) !!}
+                            {!! nl2br (e($article->body)) !!}
                         </div>
                     </div>
                     

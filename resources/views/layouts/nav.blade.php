@@ -10,6 +10,12 @@
         
         <script src="{{ secure_asset('js/app.js') }}" defer></script>
         
+        <!-- JQuery -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        
         <link rel="dns-prefetch" href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
         <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
         <link href="{{ secure_asset('css/nav.css') }}" rel="stylesheet">
@@ -65,7 +71,6 @@
                     </div>
                 </div>
             </header>
-            
             <main class="my-4">
                 @yield('content')
             </main>

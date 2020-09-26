@@ -1,6 +1,6 @@
 @extends('layouts.nav')
 
-@section('title', '{{$article->book_title}}')
+@section('title', $article->book_title)
 
 @section('content')
 <div class="container">
@@ -39,8 +39,23 @@
                         </div>
                     </div>
                     <div class="row justify-content-center">
-                        <div class="col-11 my-5 ">
-                            {!! nl2br ($article->body) !!}
+                        <div class="col-11 my-5">
+                            {!! nl2br (e($article->body)) !!}
+                            
+                            <div class="pt-3">
+                                <div class="it_actions d-flex justify-content-center">
+                                  <like :initial-is-liked-by='@json($article->isLikedBy(Auth::user()))'
+                                        :initial-count-likes='@json($article->count_likes)'
+                                        :authorized='@json(Auth::check())'
+                                        endpoint="{{ route('like', ['article' => $article]) }}">
+                                  </like>
+                                  <bookmark :initial-is-bookmarked-by='@json($article->isBookmarkedBy(Auth::user()))'
+                                            :initial-count-bookmarks='@json($article->count_bookmarks)'
+                                            :authorized='@json(Auth::check())'
+                                            endpoint="{{ route('bookmark', ['article' => $article]) }}">
+                                  </bookmark>
+                                </div>
+                          </div>
                         </div>
                     </div>
                     

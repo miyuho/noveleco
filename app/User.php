@@ -53,18 +53,28 @@ class User extends Authenticatable
     protected $guarded = array('id');
     
     
+    /* いいね
+    -------------------------------------------------*/
     public function like_articles()
     {
         return $this->belongsToMany('App\Article', 'likes');
     }
-
+    
+    
+    /* ブックマーク
+    -------------------------------------------------*/
     public function bookmark_articles()
     {
         return $this->belongsToMany('App\Article', 'bookmarks');
     }
-
+    
+    
+    /* お気に入りユーザー
+    -------------------------------------------------*/
     public function favorite_users()
     {
         return $this->belongsToMany('App\User', 'favorites', 'user_id', 'favorite_user_id');
     }
 }
+
+

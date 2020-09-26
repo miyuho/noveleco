@@ -44,7 +44,8 @@
                     <div class="col-md-8">
                         <div class="card-body pt-2">
                             <div class="card-title text-right mb-0">
-                              <object><a class="btn" href="{{ action('Admin\ArticleController@delete', ['id' => $article->id]) }}">削除</a></object>
+                                <i class="fas fa-heart mr-2" style="color:#ff6363;"><span class="pl-1" style="color:#7b7b7b;">{{ $article->count_likes }}</i></span>
+                                <object><a class="btn" href="{{ action('Admin\ArticleController@delete', ['id' => $article->id]) }}">削除</a></object>
                             </div>
                             <h4 class="card-title">{{ \Str::limit ( $article->book_title, 50 ) }}</h4>
                             <p class="card-title">{{ \Str::limit ( $article->author, 50 ) }}</p>

@@ -4,9 +4,10 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
-
-window.Vue = require('vue');
+import './bootstrap'
+import Vue from 'vue'
+import Like from './components/Like'
+import Bookmark from './components/Bookmark'
 
 /**
  * The following block of code may be used to automatically register your
@@ -28,5 +29,9 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  */
 
 const app = new Vue({
-    el: '#app',
+  el: '#app',
+  components: {
+    Like,
+    Bookmark,
+  }
 });

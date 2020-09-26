@@ -22,7 +22,6 @@ Route::get('/', 'HomeController@index');
 Route::get('/article', 'ArticleController@show');
 Route::get('/each-account', 'EachAccountController@add');
 
-
 Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function(){
     //Route::get('', '');アカウント設定ページ
     Route::get('profile/create', 'Admin\ProfileController@add');
@@ -42,6 +41,18 @@ Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function(){
     Route::get('favorite', 'Admin\FavoriteController@add');
     
     Route::get('bookmark', 'Admin\BookmarkController@add');
+});
+
+//いいね・ブックマーク・お気に入り機能
+Route::group(['prefix'=>'article', 'middleware'=>'auth'], function(){
+    Route::put('/{article}/like', 'ArticleController@like')->name('like');
+    Route::delete('/{article}/like', 'ArticleController@unlike')->name('unlike');
+    
+    Route::put('/{article}/bookmark', 'ArticleController@bookmark')->name('bookmark');
+    Route::delete('/{article}/bookmark', 'ArticleController@unbookmark')->name('unbookmark');
+    
+    Route::put('/{each-account}/favorite', 'EachAccountController@favorite')->name('favorite');
+    Route::delete('/{each-account}/favorite', 'EachAccountController@unfavorite')->name('unfavorite');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');

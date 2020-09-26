@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+use App\Like;
 use App\User;
 use App\Article;
 use Carbon\Carbon;
@@ -62,7 +63,7 @@ class ArticleController extends Controller
         
         $user = User::find($article->user_id);
         
-        return view('admin.article.show', [ 'article'=>$article, 'user' => $user ]);
+        return view('admin.article.show', [ 'article'=>$article, 'user'=>$user ]);
     }
     
     
@@ -108,4 +109,6 @@ class ArticleController extends Controller
         $article->delete();
         return redirect('admin/mypage');
     }
+    
+     
 }
