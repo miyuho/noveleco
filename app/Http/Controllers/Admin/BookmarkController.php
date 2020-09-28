@@ -17,4 +17,28 @@ class BookmarkController extends Controller
     {
         return view('admin.bookmark.index');
     }
+    
+    
+    //ブックマーク機能
+    public function bookmark(Request $request, Article $article)
+    {
+        $article->bookmark_users()->detach($request->user()->id);
+        $article->bookmark_users()->attach($request->user()->id);
+
+        return [
+            'id' => $article->id,
+            'countBookmarks' => $article->count_bookmarks,
+        ];
+    }
+
+    public function unbookmark(Request $request, Article $article)
+    {
+        
+        $article->bookmark_users()->detach($request->user()->id);
+
+        return [
+            'id' => $article->id,
+            'countBookmarks' => $article->count_bookmarks,
+        ];
+    }
 }

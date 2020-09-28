@@ -43,13 +43,13 @@
                             {!! nl2br (e($article->body)) !!}
                             
                             <div class="pt-3">
-                                <div class="it_actions d-flex justify-content-center">
-                                  <like :initial-is-liked-by='@json($article->isLikedBy(Auth::user()))'
+                                <div class="d-flex justify-content-center">
+                                  <like :initial-is-like='@json($article->isLike(Auth::user()))'
                                         :initial-count-likes='@json($article->count_likes)'
                                         :authorized='@json(Auth::check())'
                                         endpoint="{{ route('like', ['article' => $article]) }}">
                                   </like>
-                                  <bookmark :initial-is-bookmarked-by='@json($article->isBookmarkedBy(Auth::user()))'
+                                  <bookmark :initial-is-bookmark='@json($article->isBookmark(Auth::user()))'
                                             :initial-count-bookmarks='@json($article->count_bookmarks)'
                                             :authorized='@json(Auth::check())'
                                             endpoint="{{ route('bookmark', ['article' => $article]) }}">

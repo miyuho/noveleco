@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class User extends Authenticatable
 {
@@ -74,6 +75,18 @@ class User extends Authenticatable
     public function favorite_users()
     {
         return $this->belongsToMany('App\User', 'favorites', 'user_id', 'favorite_user_id');
+    }
+    
+    public function isFavorite(?User $user): bool
+    {
+        return $user
+            ? (bool)$this->favorite_users->where('id', $user->id)->count()
+            : false;
+    }
+    
+    public function getCountFavoritesAttribute(): int
+    {
+        return $this->favorite_users->count();
     }
 }
 

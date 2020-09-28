@@ -45,11 +45,11 @@ Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function(){
 
 //いいね・ブックマーク・お気に入り機能
 Route::group(['prefix'=>'article', 'middleware'=>'auth'], function(){
-    Route::put('/{article}/like', 'ArticleController@like')->name('like');
-    Route::delete('/{article}/like', 'ArticleController@unlike')->name('unlike');
+    Route::put('/{article}/like', 'Admin\LikeController@like')->name('like');
+    Route::delete('/{article}/like', 'Admin\LikeController@unlike')->name('unlike');
     
-    Route::put('/{article}/bookmark', 'ArticleController@bookmark')->name('bookmark');
-    Route::delete('/{article}/bookmark', 'ArticleController@unbookmark')->name('unbookmark');
+    Route::put('/{article}/bookmark', 'Admin\BookmarkController@bookmark')->name('bookmark');
+    Route::delete('/{article}/bookmark', 'Admin\BookmarkController@unbookmark')->name('unbookmark');
     
     Route::put('/{each-account}/favorite', 'EachAccountController@favorite')->name('favorite');
     Route::delete('/{each-account}/favorite', 'EachAccountController@unfavorite')->name('unfavorite');

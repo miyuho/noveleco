@@ -26,38 +26,38 @@ class Article extends Model
     
     
     //いいね機能
-    public function like_user(): BelongsToMany
+    public function like_users(): BelongsToMany
     {
         return $this->belongsToMany('App\User', 'likes')->withTimestamps();
     }
     
-    public function isLikedBy(?User $user): bool
+    public function isLike(?User $user): bool
     {
         return $user
-            ? (bool)$this->like_user->where('id', $user->id)->count()
+            ? (bool)$this->like_users->where('id', $user->id)->count()
             : false;
     }
     
     public function getCountLikesAttribute(): int
     {
-        return $this->like_user->count();
+        return $this->like_users->count();
     }
     
     //ブックマーク機能
-    public function bookmark_user(): BelongsToMany
+    public function bookmark_users(): BelongsToMany
     {
         return $this->belongsToMany('App\User', 'bookmarks')->withTimestamps();
     }
     
-    public function isBookmarkedBy(?User $user): bool
+    public function isBookmark(?User $user): bool
     {
         return $user
-            ? (bool)$this->bookmark_user->where('id', $user->id)->count()
+            ? (bool)$this->bookmark_users->where('id', $user->id)->count()
             : false;
     }
     
     public function getCountBookmarksAttribute(): int
     {
-        return $this->bookmark_user->count();
+        return $this->bookmark_users->count();
     }
 }

@@ -18,6 +18,13 @@
                         </div>
                         
                         <div class="col-md-7 mb-3">
+                            <div class="text-right">
+                                <favorite :initial-is-favorite='@json($user->isFavorite(Auth::user()))'
+                                          :initial-count-favorites='@json($user->count_favorites)'
+                                          :authorized='@json(Auth::check())'
+                                          endpoint="{{ route('favorite', ['user' => $user]) }}">
+                                </favorite>
+                            </div>
                             <div class="my-3">
                                 <h2>{{ $user->name }}</h2>
                             </div>

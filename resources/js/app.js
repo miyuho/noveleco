@@ -8,6 +8,7 @@ import './bootstrap'
 import Vue from 'vue'
 import Like from './components/Like'
 import Bookmark from './components/Bookmark'
+import Favorite from './components/Favorite'
 
 /**
  * The following block of code may be used to automatically register your
@@ -33,5 +34,6 @@ const app = new Vue({
   components: {
     Like,
     Bookmark,
+    Favorite,
   }
 });

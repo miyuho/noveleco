@@ -52,6 +52,8 @@
                                                 </a>
                                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                                     <a class="dropdown-item" href="{{ action('Admin\MypageController@add') }}">マイページ</a>
+                                                    <a class="dropdown-item" href="{{ action('Admin\BookmarkController@add') }}">ブックマーク</a>
+                                                    <a class="dropdown-item" href="{{ action('Admin\FavoriteController@add') }}">お気に入りユーザー</a>
                                                     <a class="dropdown-item" href="#">アカウント設定</a>
                                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                             document.getElementById('logout-form').submit();">

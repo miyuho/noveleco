@@ -20,6 +20,7 @@
                         <div class="col-md-7 mb-3">
                             <div class="text-right">
                               <a class="btn" href="{{ action('Admin\ProfileController@edit') }}">プロフィール編集</a>
+                              <i class="icon-favorite fas fa-star mr-2"><span class="pl-1" style="color:#7b7b7b;">0</span></i>
                             </div>
                             <div class="my-3">
                                 <h2>{{ $user->name }}</h2>
@@ -44,8 +45,8 @@
                     <div class="col-md-8">
                         <div class="card-body pt-2">
                             <div class="card-title text-right mb-0">
-                                <i class="fas fa-heart mr-2" style="color:#ff6363;"><span class="pl-1" style="color:#7b7b7b;">{{ $article->count_likes }}</i></span>
                                 <object><a class="btn" href="{{ action('Admin\ArticleController@delete', ['id' => $article->id]) }}">削除</a></object>
+                                <i class="icon-like fas fa-heart mr-2"><span class="pl-1" style="color:#7b7b7b;">{{ $article->count_likes }}</span></i>
                             </div>
                             <h4 class="card-title">{{ \Str::limit ( $article->book_title, 50 ) }}</h4>
                             <p class="card-title">{{ \Str::limit ( $article->author, 50 ) }}</p>

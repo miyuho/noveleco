@@ -5,7 +5,7 @@
       class="btn m-0 p-1 shadow-none"
     >
         <i class="fas fa-bookmark"
-           :class="{'yellow-text':this.isBookmarkedBy, 'animated heartBeat fast':this.gotToBookmark}"
+           :class="{'icon-bookmark':this.isBookmark}"
            @click="clickBookmark"
         ></i>
     </button>
@@ -16,7 +16,7 @@
 <script>
   export default {
     props: {
-      initialIsBookmarkedBy: {
+      initialIsBookmark: {
         type: Boolean,
         default: false,
       },
@@ -34,7 +34,7 @@
     },
     data() {
       return {
-        isBookmarkedBy: this.initialIsBookmarkedBy,
+        isBookmark: this.initialIsBookmark,
         countBookmarks: this.initialCountBookmarks,
         gotToBookmark: false,
       }
@@ -45,19 +45,19 @@
           alert('ブックマーク機能はログイン中のみ使用できます')
           return
         }
-        this.isBookmarkedBy
+        this.isBookmark
           ? this.unbookmark()
           : this.bookmark()
       },
       async bookmark() {
         const response = await axios.put(this.endpoint)
-        this.isBookmarkedBy = true
+        this.isBookmark = true
         this.countBookmarks = response.data.countBookmarks
         this.gotToBookmark = true
       },
       async unbookmark() {
         const response = await axios.delete(this.endpoint)
-        this.isBookmarkedBy = false
+        this.isBookmark = false
         this.countBookmarks = response.data.countBookmarks
         this.gotToBookmark = false
       },

@@ -1945,7 +1945,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
-    initialIsBookmarkedBy: {
+    initialIsBookmark: {
       type: Boolean,
       "default": false
     },
@@ -1963,7 +1963,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   },
   data: function data() {
     return {
-      isBookmarkedBy: this.initialIsBookmarkedBy,
+      isBookmark: this.initialIsBookmark,
       countBookmarks: this.initialCountBookmarks,
       gotToBookmark: false
     };
@@ -1975,7 +1975,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         return;
       }
 
-      this.isBookmarkedBy ? this.unbookmark() : this.bookmark();
+      this.isBookmark ? this.unbookmark() : this.bookmark();
     },
     bookmark: function bookmark() {
       var _this = this;
@@ -1991,7 +1991,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
               case 2:
                 response = _context.sent;
-                _this.isBookmarkedBy = true;
+                _this.isBookmark = true;
                 _this.countBookmarks = response.data.countBookmarks;
                 _this.gotToBookmark = true;
 
@@ -2017,7 +2017,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
               case 2:
                 response = _context2.sent;
-                _this2.isBookmarkedBy = false;
+                _this2.isBookmark = false;
                 _this2.countBookmarks = response.data.countBookmarks;
                 _this2.gotToBookmark = false;
 
@@ -2067,6 +2067,129 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Favorite.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Favorite.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    initialIsFavorite: {
+      type: Boolean,
+      "default": false
+    },
+    initialCountFavorites: {
+      type: Number,
+      "default": 0
+    },
+    authorized: {
+      type: Boolean,
+      "default": false
+    },
+    endpoint: {
+      type: String
+    }
+  },
+  data: function data() {
+    return {
+      isFavorite: this.initialIsFavorite,
+      countFavorites: this.initialCountFavorites,
+      gotToFavorite: false
+    };
+  },
+  methods: {
+    clickFavorite: function clickFavorite() {
+      if (!this.authorized) {
+        alert('お気に入り機能はログイン中のみ使用できます');
+        return;
+      }
+
+      this.isFavorite ? this.unfavorite() : this.favorite();
+    },
+    favorite: function favorite() {
+      var _this = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+        var response;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return axios.put(_this.endpoint);
+
+              case 2:
+                response = _context.sent;
+                _this.isBookmark = true;
+                _this.countFavorites = response.data.countFavorites;
+                _this.gotToFavorite = true;
+
+              case 6:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
+    },
+    unfavorite: function unfavorite() {
+      var _this2 = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+        var response;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                _context2.next = 2;
+                return axios["delete"](_this2.endpoint);
+
+              case 2:
+                response = _context2.sent;
+                _this2.isFavorite = false;
+                _this2.countFavorites = response.data.countFavorites;
+                _this2.gotToFavorite = false;
+
+              case 6:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }))();
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Like.vue?vue&type=script&lang=js&":
 /*!***************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Like.vue?vue&type=script&lang=js& ***!
@@ -2101,7 +2224,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
-    initialIsLikedBy: {
+    initialIsLike: {
       type: Boolean,
       "default": false
     },
@@ -2119,7 +2242,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   },
   data: function data() {
     return {
-      isLikedBy: this.initialIsLikedBy,
+      isLike: this.initialIsLike,
       countLikes: this.initialCountLikes,
       gotToLike: false
     };
@@ -2131,7 +2254,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         return;
       }
 
-      this.isLikedBy ? this.unlike() : this.like();
+      this.isLike ? this.unlike() : this.like();
     },
     like: function like() {
       var _this = this;
@@ -2147,7 +2270,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
               case 2:
                 response = _context.sent;
-                _this.isLikedBy = true;
+                _this.isLike = true;
                 _this.countLikes = response.data.countLikes;
                 _this.gotToLike = true;
 
@@ -2173,7 +2296,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
               case 2:
                 response = _context2.sent;
-                _this2.isLikedBy = false;
+                _this2.isLike = false;
                 _this2.countLikes = response.data.countLikes;
                 _this2.gotToLike = false;
 
@@ -38538,10 +38661,7 @@ var render = function() {
       [
         _c("i", {
           staticClass: "fas fa-bookmark",
-          class: {
-            "yellow-text": this.isBookmarkedBy,
-            "animated heartBeat fast": this.gotToBookmark
-          },
+          class: { "icon-bookmark": this.isBookmark },
           on: { click: _vm.clickBookmark }
         })
       ]
@@ -38603,6 +38723,43 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Favorite.vue?vue&type=template&id=3982b107&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Favorite.vue?vue&type=template&id=3982b107& ***!
+  \***********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c(
+      "button",
+      { staticClass: "btn m-0 p-1 shadow-none", attrs: { type: "button" } },
+      [
+        _c("i", {
+          staticClass: "fas fa-star",
+          class: { "icon-favorite": this.isfavorite },
+          on: { click: _vm.clickFavorite }
+        })
+      ]
+    ),
+    _vm._v("\n  " + _vm._s(_vm.countFavorites) + "\n")
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Like.vue?vue&type=template&id=354af9fc&":
 /*!*******************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Like.vue?vue&type=template&id=354af9fc& ***!
@@ -38625,10 +38782,7 @@ var render = function() {
       [
         _c("i", {
           staticClass: "fas fa-heart mr-1",
-          class: {
-            "red-text": this.isLikedBy,
-            "animated heartBeat fast": this.gotToLike
-          },
+          class: { "icon-like": this.isLike },
           on: { click: _vm.clickLike }
         })
       ]
@@ -50820,11 +50974,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_Like__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Like */ "./resources/js/components/Like.vue");
 /* harmony import */ var _components_Bookmark__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Bookmark */ "./resources/js/components/Bookmark.vue");
+/* harmony import */ var _components_Favorite__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Favorite */ "./resources/js/components/Favorite.vue");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
+
 
 
 
@@ -50850,7 +51006,8 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
   el: '#app',
   components: {
     Like: _components_Like__WEBPACK_IMPORTED_MODULE_2__["default"],
-    Bookmark: _components_Bookmark__WEBPACK_IMPORTED_MODULE_3__["default"]
+    Bookmark: _components_Bookmark__WEBPACK_IMPORTED_MODULE_3__["default"],
+    Favorite: _components_Favorite__WEBPACK_IMPORTED_MODULE_4__["default"]
   }
 });
 
@@ -51034,6 +51191,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Favorite.vue":
+/*!**********************************************!*\
+  !*** ./resources/js/components/Favorite.vue ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Favorite_vue_vue_type_template_id_3982b107___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Favorite.vue?vue&type=template&id=3982b107& */ "./resources/js/components/Favorite.vue?vue&type=template&id=3982b107&");
+/* harmony import */ var _Favorite_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Favorite.vue?vue&type=script&lang=js& */ "./resources/js/components/Favorite.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Favorite_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Favorite_vue_vue_type_template_id_3982b107___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Favorite_vue_vue_type_template_id_3982b107___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Favorite.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Favorite.vue?vue&type=script&lang=js&":
+/*!***********************************************************************!*\
+  !*** ./resources/js/components/Favorite.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Favorite_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Favorite.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Favorite.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Favorite_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Favorite.vue?vue&type=template&id=3982b107&":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/components/Favorite.vue?vue&type=template&id=3982b107& ***!
+  \*****************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Favorite_vue_vue_type_template_id_3982b107___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Favorite.vue?vue&type=template&id=3982b107& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Favorite.vue?vue&type=template&id=3982b107&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Favorite_vue_vue_type_template_id_3982b107___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Favorite_vue_vue_type_template_id_3982b107___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

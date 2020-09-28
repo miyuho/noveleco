@@ -5,7 +5,7 @@
       class="btn m-0 p-1 shadow-none"
     >
       <i class="fas fa-heart mr-1"
-         :class="{'red-text':this.isLikedBy, 'animated heartBeat fast':this.gotToLike}"
+         :class="{'icon-like':this.isLike}"
          @click="clickLike"
       ></i>
     </button>
@@ -16,7 +16,7 @@
 <script>
   export default {
     props: {
-      initialIsLikedBy: {
+      initialIsLike: {
         type: Boolean,
         default: false,
       },
@@ -34,7 +34,7 @@
     },
     data() {
       return {
-        isLikedBy: this.initialIsLikedBy,
+        isLike: this.initialIsLike,
         countLikes: this.initialCountLikes,
         gotToLike: false,
       }
@@ -45,19 +45,19 @@
           alert('いいね機能はログイン中のみ使用できます')
           return
         }
-        this.isLikedBy
+        this.isLike
           ? this.unlike()
           : this.like()
       },
       async like() {
         const response = await axios.put(this.endpoint)
-        this.isLikedBy = true
+        this.isLike = true
         this.countLikes = response.data.countLikes
         this.gotToLike = true
       },
       async unlike() {
         const response = await axios.delete(this.endpoint)
-        this.isLikedBy = false
+        this.isLike = false
         this.countLikes = response.data.countLikes
         this.gotToLike = false
       },
