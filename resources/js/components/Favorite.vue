@@ -5,7 +5,7 @@
       class="btn m-0 p-1 shadow-none"
     >
         <i class="fas fa-star"
-           :class="{'icon-favorite':this.isfavorite}"
+           :class="{'icon-favorite':this.isFavorite}"
            @click="clickFavorite"
         ></i>
     </button>
@@ -43,7 +43,7 @@
       clickFavorite() {
         if (!this.authorized) {
           alert('お気に入り機能はログイン中のみ使用できます')
-          return
+        return
         }
         this.isFavorite
           ? this.unfavorite()
@@ -51,7 +51,7 @@
       },
       async favorite() {
         const response = await axios.put(this.endpoint)
-        this.isBookmark = true
+        this.isFavorite = true
         this.countFavorites = response.data.countFavorites
         this.gotToFavorite = true
       },
@@ -63,4 +63,4 @@
       },
     },
   }
-</script>
+</script> 

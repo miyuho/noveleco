@@ -72,10 +72,15 @@ class User extends Authenticatable
     
     /* お気に入りユーザー
     -------------------------------------------------*/
-    public function favorite_users()
+    public function favorite_users(): BelongsToMany//される側
     {
         return $this->belongsToMany('App\User', 'favorites', 'user_id', 'favorite_user_id');
     }
+    
+    // public function favorite_users(): BelongsToMany//する側
+    // {
+    //     return $this->belongsToMany('App\User', 'favorites', 'favorite_user_id', 'user_id');
+    // }
     
     public function isFavorite(?User $user): bool
     {
@@ -88,6 +93,7 @@ class User extends Authenticatable
     {
         return $this->favorite_users->count();
     }
+    
 }
 
 

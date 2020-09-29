@@ -1,6 +1,6 @@
 @extends('layouts.nav')
 
-@section('title', $user->name.'さんのページ')
+@section('title', $each_account->name.'さんのページ')
 
 @section('content')
 <div class="container">
@@ -10,8 +10,8 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-4 ml-md-4" style="text-align: center;">
-                            @if ( $user->icon_image_path != null )
-                                <img src="{{ asset('/storage/image/'.$user->icon_image_path) }}" alt="プロフィール画像" class="show-img img-thumbnail ">
+                            @if ( $each_account->icon_image_path != null )
+                                <img src="{{ asset('/storage/image/'.$each_account->icon_image_path) }}" alt="プロフィール画像" class="show-img img-thumbnail ">
                             @else
                                 <img src="{{ asset('/image/no_image.png') }}" alt="画像がありません" class="show-img img-thumbnail">
                             @endif
@@ -19,17 +19,17 @@
                         
                         <div class="col-md-7 mb-3">
                             <div class="text-right">
-                                <favorite :initial-is-favorite='@json($user->isFavorite(Auth::user()))'
-                                          :initial-count-favorites='@json($user->count_favorites)'
+                                <favorite :initial-is-favorite='@json($each_account->isFavorite(Auth::user()))'
+                                          :initial-count-favorites='@json($each_account->count_favorites)'
                                           :authorized='@json(Auth::check())'
-                                          endpoint="{{ route('favorite', ['user' => $user]) }}">
+                                          endpoint="{{ route('favorite', ['each_account' => $each_account]) }}">
                                 </favorite>
                             </div>
                             <div class="my-3">
-                                <h2>{{ $user->name }}</h2>
+                                <h2>{{ $each_account->name }}</h2>
                             </div>
                             <div class="my-3">
-                                <p>{!! nl2br (e($user->introduction)) !!}</p>
+                                <p>{!! nl2br (e($each_account->introduction)) !!}</p>
                             </div>
                         </div>
                     </div>

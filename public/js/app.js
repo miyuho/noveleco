@@ -2147,7 +2147,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
               case 2:
                 response = _context.sent;
-                _this.isBookmark = true;
+                _this.isFavorite = true;
                 _this.countFavorites = response.data.countFavorites;
                 _this.gotToFavorite = true;
 
@@ -38745,7 +38745,7 @@ var render = function() {
       [
         _c("i", {
           staticClass: "fas fa-star",
-          class: { "icon-favorite": this.isfavorite },
+          class: { "icon-favorite": this.isFavorite },
           on: { click: _vm.clickFavorite }
         })
       ]

@@ -19,25 +19,26 @@ class FavoriteController extends Controller
     }
     
     //お気に入り機能
-    public function favorite(Request $request, User $user)
+    public function favorite(Request $request, User $each_account)
     {
-        $user->favorite_users()->detach($request->user()->id);
-        $user->favorite_users()->attach($request->user()->id);
-
+        $each_account->favorite_users()->detach($request->user()->id);
+        $each_account->favorite_users()->attach($request->user()->id);
+        
         return [
-            'id' => $user->id,
-            'countFavorites' => $user->count_favorites,
+            'id' => $each_account->id,
+            'countFavorites' => $each_account->count_favorites,
         ];
     }
 
-    public function unfavorite(Request $request, User $user)
+    public function unfavorite(Request $request, User $each_account)
     {
         
-        $user->favorite_users()->detach($request->user()->id);
-
+        $each_account->favorite_users()->detach($request->user()->id);
+        
         return [
-            'id' => $user->id,
-            'countFavorites' => $user->count_favorites,
+            'id' => $each_account->id,
+            'countFavorites' => $each_account->count_favorites,
         ];
     }
+    
 }

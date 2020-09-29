@@ -12,13 +12,13 @@ class EachAccountController extends Controller
 {
     public function add(Request $request)
     {
-        $user = User::find($request->id);
-        if (empty($user)) {
+        $each_account = User::find($request->id);
+        if (empty($each_account)) {
             abort(404);
         }
         
-        $articles = Article::where('user_id', $user->id)->orderBy('created_at','desc')->get();
+        $articles = Article::where('user_id', $each_account->id)->orderBy('created_at','desc')->get();
         
-        return view('each_account.index', [ 'user'=>$user, 'articles'=>$articles ]);
+        return view('each_account.index', [ 'each_account'=>$each_account, 'articles'=>$articles ]);
     }
 }
