@@ -53,8 +53,8 @@ Route::group(['prefix'=>'article', 'middleware'=>'auth'], function(){
 });
 //お気に入り機能
 Route::group(['prefix'=>'each_account', 'middleware'=>'auth'], function(){
-    Route::put('/{each_account}/favorite', 'FavoriteController@favorite')->name('favorite');
-    Route::delete('/{each_account}/favorite', 'FavoriteController@unfavorite')->name('unfavorite');
+    Route::put('/{each_account}/favorite', 'Admin\FavoriteController@favorite')->name('favorite');
+    Route::delete('/{each_account}/favorite', 'Admin\FavoriteController@unfavorite')->name('unfavorite');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
