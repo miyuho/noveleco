@@ -80,7 +80,7 @@ class User extends Authenticatable
     public function isFavorite(?User $user): bool
     {
         return $user
-            ? (bool)$this->favorite_users->where('id', $user->id)->count()
+            ? (bool)$this->favorite_users->where('id', $user->id)->count() 
             : false;
     }
     

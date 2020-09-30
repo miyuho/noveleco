@@ -36,7 +36,7 @@ class FavoriteController extends Controller
         $each_account->favorite_users()->detach($request->user()->id);
         
         return [
-            'id' => $each_account->id,
+            'id' => $each_account->id, 
             'countFavorites' => $each_account->count_favorites,
         ];
     }

@@ -51,7 +51,7 @@ Route::group(['prefix'=>'article', 'middleware'=>'auth'], function(){
     Route::put('/{article}/bookmark', 'Admin\BookmarkController@bookmark')->name('bookmark');
     Route::delete('/{article}/bookmark', 'Admin\BookmarkController@unbookmark')->name('unbookmark');
 });
-//お気に入り機能
+//お気に入り機能 
 Route::group(['prefix'=>'each_account', 'middleware'=>'auth'], function(){
     Route::put('/{each_account}/favorite', 'Admin\FavoriteController@favorite')->name('favorite');
     Route::delete('/{each_account}/favorite', 'Admin\FavoriteController@unfavorite')->name('unfavorite');
