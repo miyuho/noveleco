@@ -12,7 +12,7 @@ use Storage;
 
 class MypageController extends Controller
 {
-    public function add(Request $request)
+    public function index(Request $request)
     {
         $id = Auth::id();
         $user = User::find($id);

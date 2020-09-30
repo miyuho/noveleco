@@ -13,16 +13,21 @@ use Storage;
 
 class FavoriteController extends Controller
 {
-    public function add()
+    public function index()
     {
-        return view('admin.favorite.index');
+        $id = Auth::id();
+        $user = User::find($id);
+        
+        $favorite_users = $user->favorite_users;
+        
+        return view('admin.favorite.index', [ 'favorite_users'=>$favorite_users ]);
     }
     
     //お気に入り機能
     public function favorite(Request $request, User $each_account)
     {
-        $each_account->favorite_users()->detach($request->user()->id);
-        $each_account->favorite_users()->attach($request->user()->id);
+        $each_account->favorite_user()->detach($request->user()->id);
+        $each_account->favorite_user()->attach($request->user()->id);
         
         return [
             'id' => $each_account->id,
@@ -33,7 +38,7 @@ class FavoriteController extends Controller
     public function unfavorite(Request $request, User $each_account)
     {
         
-        $each_account->favorite_users()->detach($request->user()->id);
+        $each_account->favorite_user()->detach($request->user()->id);
         
         return [
             'id' => $each_account->id, 

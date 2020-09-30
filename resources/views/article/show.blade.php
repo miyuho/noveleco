@@ -19,7 +19,7 @@
                         
                         <div class="col-md-7">
                             <div class="text-right">
-                                <a class="pr-3" href="{{ action('EachAccountController@add', ['id' => $user->id]) }}">
+                                <a class="pr-3" href="{{ action('EachAccountController@index', ['id' => $user->id]) }}">
                                     <img src="{{ asset('/storage/image/'.$user->icon_image_path) }}" alt="ユーザーアイコン" class="icon">
                                     {{ $user->name }}
                                 </a>

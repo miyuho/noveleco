@@ -13,9 +13,14 @@ use Storage;
 
 class BookmarkController extends Controller
 {
-    public function add(Request $request)
+    public function index(Request $request)
     {
-        return view('admin.bookmark.index');
+        $id = Auth::id();
+        $user = User::find($id);
+        
+        $articles = $user->bookmark_articles;
+        
+        return view('admin.bookmark.index', [ 'articles'=>$articles ]);
     }
     
     

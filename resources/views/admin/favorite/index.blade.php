@@ -1,13 +1,46 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.nav')
 
-        <title>お気に入りユーザー</title>
-    </head>
-    <body>
-        <h1>お気に入りユーザー一覧</h1>
-    </body>
-</html>
+@section('title', 'お気に入りユーザー')
+
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10 mt-3">
+            <div class="card">
+                <div class="card-body pb-3 pt-4">
+                    <div class="">
+                        <h2 class="content-title mb-0">お気に入りユーザー</h2>
+                    </div>
+                    
+                </div>
+            </div>
+            @foreach ( $favorite_users as $favorite_user )
+            <a class="card no_gutters" href="{{ action('EachAccountController@index', ['id' => $favorite_user->id]) }}">
+                <div class="row">
+                    <div class="col-md-3 ml-md-5 my-4" style="text-align: center;">
+                        @if ( $favorite_user->icon_image_path != null )
+                            <img src="{{ asset('/storage/image/'.$favorite_user->icon_image_path) }}" alt="本の画像" class="index-img img-thumbnail ">
+                        @else
+                            <img src="{{ asset('/image/no_image.png') }}" alt="画像がありません" class="index-img img-thumbnail">
+                        @endif
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body pt-2">
+                            <div class="card-title text-right mb-0">
+                                <favorite :initial-is-favorite='@json($favorite_user->isFavorite(Auth::user()))'
+                                          :initial-count-favorites='@json($favorite_user->count_favorites)'
+                                          :authorized='@json(Auth::check())'
+                                          endpoint="{{ route('favorite', ['each_account' => $favorite_user]) }}">
+                                </favorite>
+                            </div>
+                            <h4 class="card-title">{{ \Str::limit ( $favorite_user->name, 50 ) }}</h4>
+                            <p class="card-title">{{ \Str::limit ( $favorite_user->introduction, 150 ) }}</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            @endforeach
+        </div>
+　　</div>
+</div>
+@endsection

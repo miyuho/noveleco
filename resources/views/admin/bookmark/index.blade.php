@@ -6,20 +6,16 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10 mt-3">
-            <div class="col-md-10 mt-3">
             <div class="card">
-                <div class="card-body">
-                    <div class="border-bottom pb-1 mb-4">
-                        <h2 class="content-title">ブックマーク </h2>
+                <div class="card-body pb-3 pt-4">
+                    <div class="">
+                        <h2 class="content-title mb-0">ブックマーク </h2>
                     </div>
-                    <div class="row">
-                       <!-- headlineで最初の記事だけここに入れる -->
-                    </div>
+                    
                 </div>
             </div>
-        </div>
             @foreach ( $articles as $article )
-            <a class="card no_gutters" href="{{ action('Admin\ArticleController@show', ['id' => $article->id]) }}">
+            <a class="card no_gutters" href="{{ action('ArticleController@show', ['id' => $article->id]) }}">
                 <div class="row">
                     <div class="col-md-3 ml-md-5 my-4" style="text-align: center;">
                         @if ( $article->book_image_path != null )
@@ -31,7 +27,11 @@
                     <div class="col-md-8">
                         <div class="card-body pt-2">
                             <div class="card-title text-right mb-0">
-                                <object><a class="btn" href="{{ action('ArticleController@unbookmark', ['id' => $article->id]) }}">削除</a></object>
+                                <bookmark :initial-is-bookmark='@json($article->isBookmark(Auth::user()))'
+                                          :initial-count-bookmarks='@json($article->count_bookmarks)'
+                                          :authorized='@json(Auth::check())'
+                                          endpoint="{{ route('bookmark', ['article' => $article]) }}">
+                                </bookmark>
                             </div>
                             <h4 class="card-title">{{ \Str::limit ( $article->book_title, 50 ) }}</h4>
                             <p class="card-title">{{ \Str::limit ( $article->author, 50 ) }}</p>

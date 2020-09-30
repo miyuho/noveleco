@@ -20,7 +20,7 @@ Auth::routes();
 Route::get('/', 'HomeController@index');
 
 Route::get('/article', 'ArticleController@show');
-Route::get('/each-account', 'EachAccountController@add');
+Route::get('/each-account', 'EachAccountController@index');
 
 Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function(){
     //Route::get('', '');アカウント設定ページ
@@ -36,11 +36,11 @@ Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function(){
     Route::post('article/edit', 'Admin\ArticleController@update');
     Route::get ('news/delete', 'Admin\ArticleController@delete');
     
-    Route::get('mypage', 'Admin\MypageController@add');
+    Route::get('mypage', 'Admin\MypageController@index');
     
-    Route::get('favorite', 'Admin\FavoriteController@add');
+    Route::get('favorite', 'Admin\FavoriteController@index');
     
-    Route::get('bookmark', 'Admin\BookmarkController@add');
+    Route::get('bookmark', 'Admin\BookmarkController@index');
 });
 
 //いいね・ブックマーク機能
