@@ -45,8 +45,31 @@
                     <div class="col-md-8">
                         <div class="card-body pt-2">
                             <div class="card-title text-right mb-0">
-                                <object><a class="btn" href="{{ action('Admin\ArticleController@delete', ['id' => $article->id]) }}">削除</a></object>
-                                <i class="icon-like fas fa-heart mr-2"><span class="pl-1" style="color:#7b7b7b;">{{ $article->count_likes }}</span></i>
+                                <form action="{{ action('Admin\ArticleController@delete', ['id' => $article->id]) }}" method="post">
+                                    @csrf
+                                    <button class="btn" data-toggle="modal" data-target="#exampleModal">削除</button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                      <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">記事の削除</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body text-left">
+                                            投稿記事を削除します。削除してよろしいですか？
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">いいえ</button>
+                                            <button type="button" class="btn btn-primary">はい</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </form>
+                                <i class="icon-like fas fa-heart mr-2 ml-2"><span class="pl-1" style="color:#7b7b7b;">{{ $article->count_likes }}</span></i>
                             </div>
                             <h4 class="card-title">{{ \Str::limit ( $article->book_title, 50 ) }}</h4>
                             <p class="card-title">{{ \Str::limit ( $article->author, 50 ) }}</p>
@@ -57,6 +80,7 @@
                 </div>
             </a>
             @endforeach
+            
         </div>
 　　</div>
 </div>

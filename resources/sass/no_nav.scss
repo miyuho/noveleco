@@ -5,6 +5,17 @@ body {
   color: #7b7b7b;
 }
 
+a {
+  text-decoration: none!important;
+  color: inherit;
+}
+a:hover {
+　text-decoration: none;
+  color: inherit;
+}
+
+/* ヘッダー 
+-------------------------------------------------*/
 header {
   background-image: url('../image/IMG_5236.jpg');
   background-repeat: repeat-x;

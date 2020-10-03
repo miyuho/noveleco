@@ -13,11 +13,8 @@ class ProfileController extends Controller
 {
     public function add(Request $request)
     {
-        // $id = Auth::id();
-        // $user = User::find($id);
-        
+        session()->flash('account_created_message', 'アカウントを作成しました');
         return view('admin.profile.create');
-        // , [ 'user'=>$user ]
     }
     
     public function create(Request $request)
