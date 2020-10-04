@@ -45,7 +45,7 @@
                     <div class="col-md-8">
                         <div class="card-body pt-2">
                             <div class="card-title d-flex justify-content-end text-right mb-0">
-                                <form method="post" action="{{ route('delete', ['id' => $article]) }}">
+                                <form method="post" action="{{ route('delete', ['id' => $article->id]) }}">
                                 @csrf
                                 <input type="submit" value="削除" class="btn" onclick="return confirm('「 {{$article->book_title}} 」を削除して宜しいですか？');">
                                 </form>
