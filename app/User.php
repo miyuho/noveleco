@@ -91,7 +91,7 @@ class User extends Authenticatable
     
     public function getCountFavoritesAttribute(): int
     {
-        return $this->favorite_users->count();
+        return $this->favorite_user->count();
     }
     
 }

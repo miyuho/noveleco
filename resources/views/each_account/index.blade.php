@@ -22,7 +22,7 @@
                                 <favorite :initial-is-favorite='@json($each_account->isFavorite(Auth::user()))'
                                           :initial-count-favorites='@json($each_account->count_favorites)'
                                           :authorized='@json(Auth::check())'
-                                          endpoint="{{ route('each_account', ['each_account' => $each_account]) }}">
+                                          endpoint="{{ route('favorite', ['each_account' => $each_account]) }}">
                                 </favorite>
                             </div>
                             <div class="my-3">

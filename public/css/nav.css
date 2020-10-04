@@ -72,6 +72,11 @@ header {
   width: 20px;
 }
 
+.favorite-user-img {
+  height: 100px;
+  width: auto;
+}
+
 /* ボタン
 -------------------------------------------------- */
 .icon-like {

@@ -34,7 +34,7 @@ Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function(){
     Route::get('article/edit', 'Admin\ArticleController@edit');
     Route::post('article/create', 'Admin\ArticleController@create');
     Route::post('article/edit', 'Admin\ArticleController@update');
-    Route::post('news/delete', 'Admin\ArticleController@delete');
+    Route::post('article/delete/{id}', 'Admin\ArticleController@delete');
     
     Route::get('mypage', 'Admin\MypageController@index');
     

@@ -17,14 +17,14 @@
             @foreach ( $favorite_users as $favorite_user )
             <a class="card no_gutters" href="{{ action('EachAccountController@index', ['id' => $favorite_user->id]) }}">
                 <div class="row">
-                    <div class="col-md-3 ml-md-5 my-4" style="text-align: center;">
+                    <div class="col-md-2 ml-md-4 my-3" style="text-align: center;">
                         @if ( $favorite_user->icon_image_path != null )
-                            <img src="{{ asset('/storage/image/'.$favorite_user->icon_image_path) }}" alt="本の画像" class="index-img img-thumbnail ">
+                            <img src="{{ asset('/storage/image/'.$favorite_user->icon_image_path) }}" alt="本の画像" class="favorite-user-img img-thumbnail ">
                         @else
-                            <img src="{{ asset('/image/no_image.png') }}" alt="画像がありません" class="index-img img-thumbnail">
+                            <img src="{{ asset('/image/no_image.png') }}" alt="画像がありません" class="favorite-user-img img-thumbnail">
                         @endif
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-9">
                         <div class="card-body pt-2">
                             <div class="card-title text-right mb-0">
                                 <favorite :initial-is-favorite='@json($favorite_user->isFavorite(Auth::user()))'
@@ -33,8 +33,8 @@
                                           endpoint="{{ route('favorite', ['each_account' => $favorite_user]) }}">
                                 </favorite>
                             </div>
-                            <h4 class="card-title">{{ \Str::limit ( $favorite_user->name, 50 ) }}</h4>
-                            <p class="card-title">{{ \Str::limit ( $favorite_user->introduction, 150 ) }}</p>
+                            <h4 class="card-title">{{ \Str::limit ( $favorite_user->name, 20 ) }}</h4>
+                            <p class="card-title">{{ \Str::limit ( $favorite_user->introduction, 50 ) }}</p>
                         </div>
                     </div>
                 </div>

@@ -26,7 +26,7 @@
                 </div>
             </header>
              @if (session('account_created_message'))
-                <div class="alert account_created_message text-center py-2 my-0" style="background-color:#d4d1c5;">
+                <div class="account_created_message alert text-center py-2 my-0" style="background-color:#d4d1c5;">
                     {{ session('account_created_message') }}
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>

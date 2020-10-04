@@ -103,8 +103,9 @@ class ArticleController extends Controller
     }
     
     
-    public function delete(Request $request)
+    public function delete($id)
     {
+        dd($id);
         $article = Article::find($request->id);
         $article->delete();
         return redirect('admin/mypage');
