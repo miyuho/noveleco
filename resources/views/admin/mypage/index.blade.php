@@ -33,10 +33,6 @@
                 </div>
             </div>
             @foreach ( $articles as $article )
-            <form method="post" action="admin/article/delete/1">
-            @csrf
-            <input type="submit" value="削除" class="btn btn-danger btn-sm" onclick='return confirm("君は本当に削除するつもりかい？");'>
-            </form>
             <a class="card no_gutters" href="{{ action('Admin\ArticleController@show', ['id' => $article->id]) }}">
                 <div class="row">
                     <div class="col-md-3 ml-md-5 my-4" style="text-align: center;">
@@ -49,30 +45,10 @@
                     <div class="col-md-8">
                         <div class="card-body pt-2">
                             <div class="card-title d-flex justify-content-end text-right mb-0">
-                                
-                                    <button type="button" 
-                                               class="btn" data-toggle="modal" data-target="#exampleModal">削除</button>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                      <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">記事の削除</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">&times;</span>
-                                            </button>
-                                          </div>
-                                          <div class="modal-body text-left">
-                                            投稿記事を削除します。削除してよろしいですか？
-                                          </div>
-                                          <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">いいえ</button>
-                                            <button type="button" class="btn btn-primary">はい</button>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                
+                                <form method="post" action="{{ route('delete', ['id' => $article]) }}">
+                                @csrf
+                                <input type="submit" value="削除" class="btn" onclick="return confirm('「 {{$article->book_title}} 」を削除して宜しいですか？');">
+                                </form>
                                 <div class="mx-2 mt-2">
                                     <i class="icon-like fas fa-heart"><span class="pl-1" style="color:#7b7b7b;">{{ $article->count_likes }}</span></i>
                                 </div>
