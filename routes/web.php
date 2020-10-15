@@ -23,6 +23,9 @@ Route::get('/article', 'ArticleController@show');
 Route::get('/each-account', 'EachAccountController@index');
 
 Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function(){
+    Route::get('account_config', 'Admin\ConfigController@index');
+    Route::post('account_config/delete/{id}', 'Admin\ConfigController@delete')->name('account_delete');
+    
     Route::get('profile/create', 'Admin\ProfileController@add');
     Route::get('profile/edit', 'Admin\ProfileController@edit');
     Route::post('profile/create', 'Admin\ProfileController@create');
@@ -33,7 +36,7 @@ Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function(){
     Route::get('article/edit', 'Admin\ArticleController@edit');
     Route::post('article/create', 'Admin\ArticleController@create');
     Route::post('article/edit', 'Admin\ArticleController@update');
-    Route::post('article/delete/{id}', 'Admin\ArticleController@delete')->name('delete');
+    Route::post('article/delete/{id}', 'Admin\ArticleController@delete')->name('article_delete');
     
     Route::get('mypage', 'Admin\MypageController@index');
     
