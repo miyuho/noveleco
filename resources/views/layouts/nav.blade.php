@@ -54,7 +54,7 @@
                                                     <a class="dropdown-item" href="{{ action('Admin\MypageController@index') }}">マイページ</a>
                                                     <a class="dropdown-item" href="{{ action('Admin\BookmarkController@index') }}">ブックマーク</a>
                                                     <a class="dropdown-item" href="{{ action('Admin\FavoriteController@index') }}">お気に入りユーザー</a>
-                                                    <a class="dropdown-item" href="#">アカウント設定</a>
+                                                    <a class="dropdown-item" href="{{ action('Admin\ConfigController@index') }}">アカウント設定</a>
                                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                             document.getElementById('logout-form').submit();">
                                                         ログアウト
