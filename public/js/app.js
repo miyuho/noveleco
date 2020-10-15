@@ -38657,7 +38657,10 @@ var render = function() {
   return _c("div", [
     _c(
       "button",
-      { staticClass: "btn m-0 p-1 shadow-none", attrs: { type: "button" } },
+      {
+        staticClass: "action-icon btn m-0 p-1 shadow-none",
+        attrs: { type: "button" }
+      },
       [
         _c("i", {
           staticClass: "fas fa-bookmark",
@@ -38665,8 +38668,7 @@ var render = function() {
           on: { click: _vm.clickBookmark }
         })
       ]
-    ),
-    _vm._v("\n  " + _vm._s(_vm.countBookmarks) + "\n")
+    )
   ])
 }
 var staticRenderFns = []
@@ -38741,7 +38743,10 @@ var render = function() {
   return _c("div", [
     _c(
       "button",
-      { staticClass: "btn m-0 p-1 shadow-none", attrs: { type: "button" } },
+      {
+        staticClass: "action-icon btn m-0 p-1 shadow-none",
+        attrs: { type: "button" }
+      },
       [
         _c("i", {
           staticClass: "fas fa-star",
@@ -38749,8 +38754,7 @@ var render = function() {
           on: { click: _vm.clickFavorite }
         })
       ]
-    ),
-    _vm._v("\n  " + _vm._s(_vm.countFavorites) + "\n")
+    )
   ])
 }
 var staticRenderFns = []
@@ -38778,7 +38782,10 @@ var render = function() {
   return _c("div", [
     _c(
       "button",
-      { staticClass: "btn m-0 p-1 shadow-none", attrs: { type: "button" } },
+      {
+        staticClass: "action-icon btn m-0 p-1 shadow-none",
+        attrs: { type: "button" }
+      },
       [
         _c("i", {
           staticClass: "fas fa-heart mr-1",
@@ -38786,8 +38793,7 @@ var render = function() {
           on: { click: _vm.clickLike }
         })
       ]
-    ),
-    _vm._v("\n  " + _vm._s(_vm.countLikes) + "\n")
+    )
   ])
 }
 var staticRenderFns = []

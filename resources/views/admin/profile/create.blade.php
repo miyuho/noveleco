@@ -30,7 +30,7 @@
                             </label>
                             <div class="col-md-7 mb-3">
                                 <div class="my-3">
-                                    <h2>{{ Auth::user()->name }}</h2>
+                                    <h2 class="user-name">{{ Auth::user()->name }}</h2>
                                 </div>
                                 <div class="my-3">
                                     <textarea class="form-control" rows="10" name="introduction" value="{{ old('introduction') }}" 
@@ -40,8 +40,8 @@
                         </div>
                         
                         <div class="text-center mr-2">
-                            <input type="submit" class="btn btn-primary " value="作成する">
-                            <a class="btn btn-link" href="{{ action('HomeController@index') }}">後でにする</a>
+                            <input type="submit" class="submit-btn btn" value="作成する">
+                            <a class="pl-2" href="{{ action('HomeController@index') }}" style="color:#dbd6d3;"><i>後でにする</i></a>
                         </div>
                         
                     </form>

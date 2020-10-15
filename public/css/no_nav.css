@@ -2,8 +2,8 @@
 body {
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #f7efd2;
-  color: #7b7b7b;
+  background-color: #f5ead7;
+  color: #877e7a;
 }
 
 a {
@@ -12,8 +12,18 @@ a {
 }
 
 a:hover {
-  　text-decoration: none;
+  　text-decoration: none !important;
   color: inherit;
+}
+
+a:active {
+  opacity: 0.8;
+  　text-decoration: none !important;
+  color: inherit;
+}
+
+.card, .border-bottom, .img-thumbnail {
+  border-color: #dbd6d3 !important;
 }
 
 /* ヘッダー 
@@ -34,4 +44,68 @@ header {
 
 .header-logo {
   color: #fff !important;
+}
+
+/* フォーム
+---------------------------------------------------*/
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #dbd6d3 !important;
+  font-style: oblique;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #dbd6d3 !important;
+  font-style: oblique;
+}
+input::placeholder, textarea::placeholder {
+  color: #dbd6d3 !important;
+  font-style: oblique;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #fff8f2 inset !important;
+}
+
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #fff8f2 inset !important;
+}
+
+.form-control {
+  box-shadow: none !important;
+  outline: none !important;
+  border-color: #dbd6d3 !important;
+  color: #877e7a !important;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+  border-color: #ab8771 !important;
+}
+
+/* テキスト
+-------------------------------------------------*/
+.content-title {
+  color: #6e6560;
+}
+
+/* ボタン
+-------------------------------------------------- */
+.btn {
+  box-shadow: none !important;
+}
+
+.submit-btn {
+  color: white;
+  background-color: #e3923b;
+  border: 1px solid #ced4da;
+}
+
+.submit-btn:hover {
+  color: white;
+  background-color: #d48a3b;
+}
+
+.submit-btn:active {
+  opacity: 0.7;
+  color: white;
+  background-color: #d48a3b;
 }

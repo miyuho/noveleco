@@ -17,8 +17,10 @@
                         @if( count($errors) > 0 )
                           <ul>
                             @foreach( $errors->all() as $e )
-                            <li>{{ $e }}</li>
-                            @endforeach
+                            <span style="color:red; font-size:13px;">
+                                <li>{{ $e }}</li>
+                                @endforeach
+                            </span>
                           </ul>
                         @endif
                         
@@ -54,7 +56,7 @@
                             </div>
                         </div>
                         <div class="text-center">
-                            <input type="submit" class="btn btn-primary " value="投稿する">
+                            <input type="submit" class="submit-btn btn" value="投稿する">
                         </div>
                         
                     </form>

@@ -30,14 +30,6 @@ class HomeController extends Controller
     public function index(Request $request)
     {
         
-        // $cond_words = $request->cond_words;
-        // if ($cond_words != ''){
-        //     $articles = Article::where('book_title', 'like', "%{$cond_words}%")->orWhere('author', $cond_words)
-        //                       ->orWhere('subtitle', 'like', "%{$cond_words}%")->orWhere('body', 'like', "%{$cond_words}%")->orderBy('created_at','desc')->get();
-        // } else{
-        //     $articles = Article::orderBy('created_at','desc')->get();
-        // }
-        
         $q = $request->q;
         
         if ($q != '') {

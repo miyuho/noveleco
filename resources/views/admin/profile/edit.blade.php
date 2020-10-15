@@ -40,7 +40,7 @@
                             </div>
                             <div class="col-md-7 mb-3">
                                 <div class="my-3">
-                                    <h2>{{ $user_form->name }}</h2>
+                                    <h2 class="user-name">{{ $user_form->name }}</h2>
                                 </div>
                                 <div class="my-3">
                                     @if ( $user_form->introduction != null )
@@ -55,7 +55,7 @@
                         
                         <div class="text-center mr-2">
                             <input type="hidden" name="id" value="{{ $user_form->id }}">
-                            <input type="submit" class="btn btn-primary " value="更新する">
+                            <input type="submit" class="submit-btn btn" value="更新する">
                         </div>
                         
                     </form>

@@ -19,22 +19,22 @@
                         
                         <div class="col-md-7">
                             <div class="text-right">
-                                <a class="btn mr-2" href="{{ action('Admin\ArticleController@edit', ['id' => $article->id]) }}">編集する</a>
+                                <a class="edit-btn mr-3" href="{{ action('Admin\ArticleController@edit', ['id' => $article->id]) }}">編集する</a>
                                 <span class="date">{{ $article->created_at->format('Y年m月d日') }}</span>
                             </div>
-                            <div class="mb-3 mt-3">
+                            <div class="book-title mb-3 mt-3">
                                 <h2>{{ $article->book_title }}</h2>
                             </div>
-                            <div class="my-3">
+                            <div class="show-author my-3">
                                 <p>{{ $article->author }}</p>
                             </div>
-                            <div class="my-3">
+                            <div class="show-subtitle my-3">
                                 <p><i>「{{ $article->subtitle }}」</i></p>
                             </div>
                         </div>
                     </div>
                     <div class="row justify-content-center">
-                        <div class="col-11 my-5">
+                        <div class="show-body col-11 my-5">
                             {!! nl2br (e($article->body)) !!}
                         </div>
                     </div>

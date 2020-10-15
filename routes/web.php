@@ -23,7 +23,6 @@ Route::get('/article', 'ArticleController@show');
 Route::get('/each-account', 'EachAccountController@index');
 
 Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function(){
-    //Route::get('', '');アカウント設定ページ
     Route::get('profile/create', 'Admin\ProfileController@add');
     Route::get('profile/edit', 'Admin\ProfileController@edit');
     Route::post('profile/create', 'Admin\ProfileController@create');

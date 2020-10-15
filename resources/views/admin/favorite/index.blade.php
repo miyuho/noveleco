@@ -25,21 +25,23 @@
                         @endif
                     </div>
                     <div class="col-md-9">
-                        <div class="card-body pt-2">
-                            <div class="card-title text-right mb-0">
-                                <favorite :initial-is-favorite='@json($favorite_user->isFavorite(Auth::user()))'
-                                          :initial-count-favorites='@json($favorite_user->count_favorites)'
-                                          :authorized='@json(Auth::check())'
-                                          endpoint="{{ route('favorite', ['each_account' => $favorite_user]) }}">
-                                </favorite>
-                            </div>
-                            <h4 class="card-title">{{ \Str::limit ( $favorite_user->name, 20 ) }}</h4>
-                            <p class="card-title">{{ \Str::limit ( $favorite_user->introduction, 50 ) }}</p>
+                        <div class="card-body">
+                            <h3 class="user-name mb-0">{{ \Str::limit ( $favorite_user->name, 30 ) }}</h3>
+                            <p class="pt-2">{{ \Str::limit ( $favorite_user->introduction, 150 ) }}</p>
                         </div>
                     </div>
                 </div>
             </a>
             @endforeach
+            
+            <!--該当するものが無ければメッセージを表示させる-->
+            @if ( $favorite_users->isEmpty() )
+                <div class="card">
+                    <div class="card-body text-center">
+                        お気に入り登録したユーザーはいません
+                    </div>
+                </div>
+            @endif
         </div>
 　　</div>
 </div>

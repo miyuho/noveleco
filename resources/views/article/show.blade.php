@@ -21,28 +21,28 @@
                             <div class="text-right">
                                 <a class="pr-3" href="{{ action('EachAccountController@index', ['id' => $user->id]) }}">
                                     <img src="{{ asset('/storage/image/'.$user->icon_image_path) }}" alt="ユーザーアイコン" class="icon">
-                                    {{ $user->name }}
+                                    <span class="show-user-name">{{ $user->name }}</span>
                                 </a>
                                 <span class="date">
                                     {{ $article->created_at->format('Y年m月d日') }}
                                 </span>
                             </div>
-                            <div class="mb-3 mt-4">
+                            <div class="show-book-title mb-3 mt-4">
                                 <h2>{{ $article->book_title }}</h2>
                             </div>
-                            <div class="my-3">
+                            <div class="show-author my-3">
                                 <p>{{ $article->author }}</p>
                             </div>
-                            <div class="my-3">
+                            <div class="show-subtitle my-3">
                                 <p><i>「{{ $article->subtitle }}」</i></p>
                             </div>
                         </div>
                     </div>
                     <div class="row justify-content-center">
-                        <div class="col-11 my-5">
+                        <div class="show-body col-11 mt-5">
                             {!! nl2br (e($article->body)) !!}
                             
-                            <div class="pt-3">
+                            <div class="pt-4">
                                 <div class="d-flex justify-content-center">
                                   <like :initial-is-like='@json($article->isLike(Auth::user()))'
                                         :initial-count-likes='@json($article->count_likes)'

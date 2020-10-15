@@ -2,14 +2,14 @@
   <div>
     <button
       type="button"
-      class="btn m-0 p-1 shadow-none"
+      class="action-icon btn m-0 p-1 shadow-none"
     >
         <i class="fas fa-star"
            :class="{'icon-favorite':this.isFavorite}"
            @click="clickFavorite"
         ></i>
     </button>
-    {{ countFavorites }}
+   
   </div>
 </template>
 

@@ -1,8 +1,8 @@
 body {
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #f7efd2;
-  color: #7b7b7b;
+  background-color: #f5ead7;
+  color: #877e7a;
 }
 
 a {
@@ -10,12 +10,21 @@ a {
   color: inherit;
 }
 a:hover {
-　text-decoration: none;
+　text-decoration: none!important;
+  color: inherit;
+}
+a:active {
+  opacity: 0.8;
+　text-decoration: none!important;
   color: inherit;
 }
 
 li {
   list-style: none;
+}
+
+.card, .border-bottom, .img-thumbnail {
+  border-color: #dbd6d3 !important;
 }
 
 /* ヘッダー
@@ -40,6 +49,61 @@ header {
   list-style: none;
 }
 
+.dropdown-item:hover {
+  text-decoration: none!important;
+  color: inherit;
+  background-color: #fff8f2;
+}
+.dropdown-item:active {
+  text-decoration: none!important;
+  color: inherit;
+  background-color: #fcebde;
+}
+
+/* フォーム
+---------------------------------------------------*/
+input::placeholder, textarea::placeholder {
+  color: #dbd6d3 !important;
+  font-style: oblique;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #fff8f2 inset!important;
+}
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #fff8f2 inset!important;
+}
+.form-control {
+  box-shadow: none !important;
+  outline: none !important;
+  border-color: #dbd6d3 !important;
+  color: #877e7a !important;
+}
+.form-control:focus {
+  box-shadow: none!important;
+  border-color: #ab8771!important;
+}
+
+/* テキスト
+-------------------------------------------------*/
+.book-title, .user-name, .content-title {
+  color: #6e6560;
+}
+.show-user-name{
+  color: #e36400;
+  border-bottom: 5px solid #fff1e6;
+}
+.show-user-name:hover {
+  color: #c95700;
+  border-bottom: 5px solid #fcebde;
+}
+.show-author, .show-subtitle {
+  font-size: 1.03rem;
+}
+.show-body {
+  font-size: 1rem;
+  line-height: 2.3;
+}
+
 /* 画像
 --------------------------------------------------*/
 .select-img {
@@ -48,7 +112,7 @@ header {
 }
 
 .select-img:hover {
-  opacity: 0.7;
+  opacity: 0.8;
   cursor: pointer;
 }
 
@@ -74,14 +138,63 @@ header {
 
 /* ボタン
 -------------------------------------------------- */
+.btn {
+  box-shadow: none !important;
+}
+.submit-btn {
+  color: white;
+  background-color: #e3923b;
+  border: 1px solid #ced4da;
+}
+.submit-btn:hover {
+  color: white;
+  background-color: #d48a3b;
+}
+.submit-btn:active {
+  opacity: 0.7;
+  color: white;
+  background-color: #d48a3b;
+}
+
+.delete-btn {
+  outline: none;
+  color: #e00000;
+  background-color: #ffeded;
+  border: 1px solid #ffcfcf;
+  border-radius: 0.25rem;
+}
+.delete-btn:hover {
+  background-color: #fae8e8;
+}
+.delete-btn:active {
+  opacity: 0.8;
+}
+
+.edit-btn {
+  color: #e36400;
+  border-bottom: 5px solid #fff1e6;
+}
+.edit-btn:hover {
+  color: #c95700;
+  border-bottom: 5px solid #fcebde;
+}
+.edit-btn:active {
+  opacity: 0.8;
+}
+
+.action-icon {
+  font-size: 25px;
+  color: #cccccc;
+}
+.action-icon:hover {
+  color: #cccccc;
+}
 .icon-like {
-  color:#ff6363;
+  color: #ff6363;
 }
-
 .icon-bookmark {
-  color: #b2cf7e;
+  color: #94e307;
 }
-
 .icon-favorite {
   color: #ffd52e;
 }

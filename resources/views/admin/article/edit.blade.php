@@ -65,7 +65,7 @@
                         </div>
                         <div class="text-center">
                             <input type="hidden" name="id" value="{{ $article_form->id }}">
-                            <input type="submit" class="btn btn-primary " value="更新する">
+                            <input type="submit" class="submit-btn btn" value="更新する">
                         </div>
                         
                     </form>

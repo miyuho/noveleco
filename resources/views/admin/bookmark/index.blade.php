@@ -25,23 +25,25 @@
                         @endif
                     </div>
                     <div class="col-md-8">
-                        <div class="card-body pt-2">
-                            <div class="card-title text-right mb-0">
-                                <bookmark :initial-is-bookmark='@json($article->isBookmark(Auth::user()))'
-                                          :initial-count-bookmarks='@json($article->count_bookmarks)'
-                                          :authorized='@json(Auth::check())'
-                                          endpoint="{{ route('bookmark', ['article' => $article]) }}">
-                                </bookmark>
-                            </div>
-                            <h4 class="card-title">{{ \Str::limit ( $article->book_title, 50 ) }}</h4>
-                            <p class="card-title">{{ \Str::limit ( $article->author, 50 ) }}</p>
-                            <p class="card-title subtitle"><i>「{{ \Str::limit ( $article->subtitle, 100 ) }}」</i></p>
-                            <p class="card-title">{{ \Str::limit ( $article->body, 150 ) }}</p>
+                        <div class="card-body pt-5">
+                            <h3 class="book-title">{{ \Str::limit ( $article->book_title, 50 ) }}</h3>
+                            <p class="index-author">{{ \Str::limit ( $article->author, 50 ) }}</p>
+                            <p class="index-subtitle"><i>「{{ \Str::limit ( $article->subtitle, 100 ) }}」</i></p>
+                            <p class="index-body">{{ \Str::limit ( $article->body, 150 ) }}</p>
                         </div>
                     </div>
                 </div>
             </a>
             @endforeach
+            
+            <!--該当するものが無ければメッセージを表示させる-->
+            @if ( $articles->isEmpty() )
+                <div class="card">
+                    <div class="card-body text-center">
+                        ブックマークした記事はありません
+                    </div>
+                </div>
+            @endif
         </div>
 　　</div>
 </div>
