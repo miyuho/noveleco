@@ -90,14 +90,14 @@ input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px #fff8f2 inset !important;
 }
 
-.form-control {
+.form-control, .form-control-file {
   box-shadow: none !important;
   outline: none !important;
   border-color: #dbd6d3 !important;
   color: #877e7a !important;
 }
 
-.form-control:focus {
+.form-control:focus, .form-control-file:focus {
   box-shadow: none !important;
   border-color: #ab8771 !important;
 }
@@ -182,7 +182,7 @@ input:-webkit-autofill:focus {
   background-color: #d48a3b;
 }
 
-.delete-btn {
+.article-delete-btn {
   outline: none;
   color: #e00000;
   background-color: #ffeded;
@@ -190,11 +190,11 @@ input:-webkit-autofill:focus {
   border-radius: 0.25rem;
 }
 
-.delete-btn:hover {
+.article-delete-btn:hover {
   background-color: #fae8e8;
 }
 
-.delete-btn:active {
+.article-delete-btn:active {
   opacity: 0.8;
 }
 

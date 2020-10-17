@@ -45,9 +45,9 @@
                     <div class="col-md-8">
                         <div class="card-body pt-2">
                             <div class="d-flex justify-content-end text-right mb-0">
-                                <form method="post" action="{{ route('delete', ['id' => $article->id]) }}">
+                                <form method="post" action="{{ route('article_delete', ['id' => $article->id]) }}">
                                 @csrf
-                                <input type="submit" value="削除" class="delete-btn" onclick="return confirm('「 {{$article->book_title}} 」を削除して宜しいですか？');">
+                                <input type="submit" value="削除" class="article-delete-btn" onclick="return confirm('「 {{$article->book_title}} 」を削除して宜しいですか？');">
                                 </form>
                                 <div class="mx-2 mt-2">
                                     <i class="icon-like fas fa-heart"><span class="pl-1" style="color: #877e7a;">{{ $article->count_likes }}</span></i>
@@ -62,6 +62,14 @@
                 </div>
             </a>
             @endforeach
+            
+            @if ( $articles->isEmpty() )
+                <div class="card">
+                    <div class="card-body text-center">
+                        投稿した記事はありません
+                    </div>
+                </div>
+            @endif
             
         </div>
 　　</div>
