@@ -19,7 +19,7 @@
                 <div class="row">
                     <div class="col-md-2 ml-md-4 my-3" style="text-align: center;">
                         @if ( $favorite_user->icon_image_path != null )
-                            <img src="{{ asset('/storage/image/'.$favorite_user->icon_image_path) }}" alt="本の画像" class="favorite-user-img img-thumbnail ">
+                            <img src="{{ $favorite_user->icon_image_path }}" alt="本の画像" class="favorite-user-img img-thumbnail ">
                         @else
                             <img src="{{ asset('/image/no_image.png') }}" alt="画像がありません" class="favorite-user-img img-thumbnail">
                         @endif

@@ -25,7 +25,7 @@
                     <div class="row">
                         <div class="col-md-3 my-4 ml-md-5" style="text-align: center;">
                             @if ( $article->book_image_path != null )
-                                <img src="{{ asset('/storage/image/'.$article->book_image_path) }}" alt="本の画像" class="index-img img-thumbnail">
+                                <img src="{{ $article->book_image_path }}" alt="本の画像" class="index-img img-thumbnail">
                             @else
                                 <img src="{{ asset('/image/no_image.png') }}" alt="画像がありません" class="index-img img-thumbnail">
                             @endif

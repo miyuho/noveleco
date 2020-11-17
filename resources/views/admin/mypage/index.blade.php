@@ -6,12 +6,12 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10 mt-3">
-            <div class="user-profile card" style="border-bottom-color:#6e4500 !important;">
+            <div class="user-profile card">
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-4 ml-md-4" style="text-align: center;">
                             @if ( $user->icon_image_path != null )
-                                <img src="{{ asset('/storage/image/'.$user->icon_image_path) }}" alt="プロフィール画像" class="show-img img-thumbnail ">
+                                <img src="{{ $user->icon_image_path }}" alt="プロフィール画像" class="show-img img-thumbnail ">
                             @else
                                 <img src="{{ asset('/image/no_image.png') }}" alt="画像がありません" class="show-img img-thumbnail">
                             @endif
@@ -20,7 +20,7 @@
                         <div class="col-md-7 mb-3">
                             <div class="text-right">
                               <a class="edit-btn " href="{{ action('Admin\ProfileController@edit') }}">プロフィール編集</a>
-                              <i class="icon-favorite fas fa-star mx-2"><span class="pl-1" style="color: #877e7a;">{{ $user->count_favorites }}</span></i>
+                              <i class="icon-favorite fas fa-star mx-2"><span class="pl-1">{{ $user->count_favorites }}</span></i>
                             </div>
                             <div class="my-3">
                                 <h2 class="user-name">{{ $user->name }}</h2>
@@ -37,7 +37,7 @@
                 <div class="row">
                     <div class="col-md-3 ml-md-5 my-4" style="text-align: center;">
                         @if ( $article->book_image_path != null )
-                            <img src="{{ asset('/storage/image/'.$article->book_image_path) }}" alt="本の画像" class="index-img img-thumbnail ">
+                            <img src="{{ $article->book_image_path }}" alt="本の画像" class="index-img img-thumbnail ">
                         @else
                             <img src="{{ asset('/image/no_image.png') }}" alt="画像がありません" class="index-img img-thumbnail">
                         @endif
@@ -50,7 +50,7 @@
                                 <input type="submit" value="削除" class="article-delete-btn" onclick="return confirm('「 {{$article->book_title}} 」を削除して宜しいですか？');">
                                 </form>
                                 <div class="mx-2 mt-2">
-                                    <i class="icon-like fas fa-heart"><span class="pl-1" style="color: #877e7a;">{{ $article->count_likes }}</span></i>
+                                    <i class="icon-like fas fa-heart"><span class="pl-1">{{ $article->count_likes }}</span></i>
                                 </div>
                             </div>
                             <h3 class="book-title">{{ \Str::limit ( $article->book_title, 50 ) }}</h3>

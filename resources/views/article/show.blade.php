@@ -11,7 +11,7 @@
                     <div class="row border-bottom">
                         <div class="col-md-4 mx-md-4 mb-4" style="text-align:center;">
                             @if ( $article->book_image_path != null )
-                                <img src="{{ asset('/storage/image/'.$article->book_image_path) }}" alt="本の画像" class="show-img card-img img-thumbnail ">
+                                <img src="{{ $article->book_image_path }}" alt="本の画像" class="show-img card-img img-thumbnail ">
                             @else
                                 <img src="{{ asset('/image/no_image.png') }}" alt="画像がありません" class="show-img card-img img-thumbnail">
                             @endif
@@ -20,7 +20,7 @@
                         <div class="col-md-7">
                             <div class="text-right">
                                 <a class="pr-3" href="{{ action('EachAccountController@index', ['id' => $user->id]) }}">
-                                    <img src="{{ asset('/storage/image/'.$user->icon_image_path) }}" alt="ユーザーアイコン" class="icon">
+                                    <img src="{{ $user->icon_image_path }}" alt="ユーザーアイコン" class="icon">
                                     <span class="show-user-name">{{ $user->name }}</span>
                                 </a>
                                 <span class="date">

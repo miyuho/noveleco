@@ -24,8 +24,8 @@ class ProfileController extends Controller
         $form = $request->all();
         
         if (isset($form['icon_image'])) {
-            $path = $request->file('icon_image')->store('image', 'public');
-            $user->icon_image_path = basename($path);
+            $path = Storage::disk('s3')->putFile('/',$form['icon_image'],'public');
+            $user->icon_image_path = Storage::disk('s3')->url($path);
         }else {
             $user->icon_image_path = null;
         }
@@ -58,15 +58,15 @@ class ProfileController extends Controller
         
         if ($request->remove == 'true'){
             $user_form['icon_image_path'] = null;
-        } elseif ($request->file('icon_image')) {
-            $path = $request->file('icon_image')->store('public/image');
-            $user_form['icon_image_path'] = basename($path);
+        } elseif ($request->file('icon_image')){
+            $path = Storage::disk('s3')->putFile('/',$form['icon_image'],'public');
+            $user_form->icon_image_path = Storage::disk('s3')->url($path);
         } else {
             $user_form['icon_image_path'] = $user->icon_image_path;
         }
         
         unset($user_form['_token']);
-        unset($user_form['icon_image']);
+        unset($user_form['icon_image_path']);
         unset($user_form['remove']);
         
         $user->fill($user_form)->save();

@@ -25,13 +25,6 @@
                         @endif
                         
                         <div class="row form-group">
-                            <!--<label cass="col-md-4 inline-block">-->
-                            <!--    <div class="ml-md-3">-->
-                            <!--        <img src="{{ asset('/image/no_image.png') }}" alt="本の画像" class="select-img img-thumbnail"></img>-->
-                            <!--        <input type="file" class="form-control-file d-none" name="book_image_path" vulue="{{ old('book_image_path') }}">-->
-                            <!--    </div>-->
-                            <!--</label>-->
-                            <!-- できれば画像のプレビュー追加 -->
                             <label class="col-md-4">
                                 <div class="ml-md-3">
                                     <img src="{{ asset('/image/no_image.png') }}" alt="本の画像" class="select-img img-thumbnail">

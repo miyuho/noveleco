@@ -15,17 +15,10 @@
                         @csrf
                         
                         <div class="row form-group">
-                            <!--<label cass="col-md-4 inline-block">-->
-                            <!--    <div class="ml-md-3">-->
-                            <!--        <img src="{{ asset('/image/no_image.png') }}" alt="プロフィール画像" class="select-img img-thumbnail"></img>-->
-                            <!--        <input type="file" class="form-control-file d-none" name="icon_image"">-->
-                            <!--    </div>-->
-                            <!--</label>-->
-                            <!-- できれば画像のプレビュー追加 -->
                             <div class="col-md-4">
                                 <label class="ml-md-3" style="text-align:center;">
                                     @if ( $user_form->icon_image_path != null )
-                                        <img src="{{ asset('/storage/image/'.$user_form->icon_image_path) }}" alt="プロフィール画像" class="select-img img-thumbnail ">
+                                        <img src="{{ $user_form->icon_image_path }}" alt="プロフィール画像" class="select-img img-thumbnail ">
                                         <input type="file" class="form-control-file" name="icon_image">
                                     @else
                                         <img src="{{ asset('/image/no_image.png') }}" alt="画像がありません" class="select-img img-thumbnail">

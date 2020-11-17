@@ -23,17 +23,10 @@
                         @endif
                         
                         <div class="row form-group">
-                            <!--<label cass="col-md-4 inline-block">-->
-                            <!--    <div class="ml-md-3">-->
-                            <!--        <img src="{{ asset('/image/no_image.png') }}" alt="本の画像" class="select-img img-thumbnail"></img>-->
-                            <!--        <input type="file" class="form-control-file d-none" name="book_image_path" vulue="{{ old('book_image_path') }}">-->
-                            <!--    </div>-->
-                            <!--</label>-->
-                            <!-- できれば画像のプレビュー追加 -->
                             <div class="col-md-4">
                                 <label class="ml-md-3" style="text-align:center;">
                                     @if ($article_form->book_image_path != null)
-                                        <img src="{{ asset('/storage/image/'.$article_form->book_image_path) }}" alt="本の画像" class="select-img img-thumbnail">
+                                        <img src="{{ $article_form->book_image_path }}" alt="本の画像" class="select-img img-thumbnail">
                                         <input type="file" class="form-control-file" name="book_image">
                                     @else
                                         <img src="{{ asset('/image/no_image.png') }}" alt="本の画像" class="select-img img-thumbnail">
