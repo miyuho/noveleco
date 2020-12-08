@@ -1,4 +1,4 @@
-<!DOCTYPE ntml>
+<!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
     <head>
         <meta charset="utf-8">
@@ -24,7 +24,7 @@
         <div id="app">
             <header>
                 <div class="container">
-                    <div class=" header-nav">
+                    <div class="row header-nav">
                         <div class="col-md-3">
                             <h1><a class="header-logo" href="{{ url('/') }}">noveLeco</a></h1>
                         </div>
@@ -47,7 +47,7 @@
                                         </div>
                                         <div class="col-md-5 text-right">
                                             <li class="dropdown nav-link">
-                                                <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                                <a class="dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                                     {{ Auth::user()->name }} <span class="caret"></span>
                                                 </a>
                                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

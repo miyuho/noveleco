@@ -25,7 +25,7 @@
                                           endpoint="{{ route('favorite', ['each_account' => $each_account]) }}">
                                 </favorite>
                             </div>
-                            <div class="my-3">
+                            <div class="">
                                 <h2 class="user-name">{{ $each_account->name }}</h2>
                             </div>
                             <div class="my-3">

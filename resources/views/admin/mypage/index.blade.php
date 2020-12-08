@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10 mt-3">
-            <div class="user-profile card">
+            <div class="user-profile card" style="border-bottom-color:#6e4500 !important;">
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-4 ml-md-4" style="text-align: center;">
@@ -49,7 +49,7 @@
                                 @csrf
                                 <input type="submit" value="削除" class="article-delete-btn" onclick="return confirm('「 {{$article->book_title}} 」を削除して宜しいですか？');">
                                 </form>
-                                <div class="mx-2 mt-2">
+                                <div class="mx-2 mt-1">
                                     <i class="icon-like fas fa-heart"><span class="pl-1">{{ $article->count_likes }}</span></i>
                                 </div>
                             </div>

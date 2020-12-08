@@ -20,7 +20,7 @@
                         <div class="col-md-7">
                             <div class="text-right">
                                 <a class="pr-3" href="{{ action('EachAccountController@index', ['id' => $user->id]) }}">
-                                    <img src="{{ $user->icon_image_path }}" alt="ユーザーアイコン" class="icon">
+                                    <img src="{{ $user->icon_image_path }}" class="icon">
                                     <span class="show-user-name">{{ $user->name }}</span>
                                 </a>
                                 <span class="date">
