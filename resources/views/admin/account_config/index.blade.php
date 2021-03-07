@@ -2,39 +2,27 @@
 
 @section('title', 'アカウント設定')
 
+@section('css')<link href="{{ secure_asset('css/account_config.css') }}" rel="stylesheet">@endsection
+
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8 mt-4">
+    
+    <h1 class="content-title">アカウント設定</h1>
+    
+    <form class="account_delete" method="POST" action="{{ route('account_delete', ['id' => $user->id]) }}">
+        @csrf
+        <h2 class="item-name"><i class="fa fa-trash pr-1"></i>
+            アカウント削除
+        </h2>
+        
+        <div class="item-contents">
+            <p class="mb-0">アカウントを削除すると、投稿した記事など、全てのデータが削除されます。</p>
+            <p class="caution">一度削除すると元には戻せませんのでご注意下さい。</p>
             
-            <div class="card">
-                <div class="card-body">
-                    <div class="border-bottom pb-1 mb-4">
-                        <h2 class="content-title">アカウント設定</h2>
-                    </div>
-                    <form method="POST" action="{{ route('account_delete', ['id' => $user->id]) }}">
-                        @csrf
-                        <div class="account_delete">
-                            <h4 class="pl-2"><i class="fa fa-trash pr-1"></i>
-                                アカウント削除
-                            </h4>
-                            <div class="row justify-content-center">
-                                <div class="col-md-11">
-                                    <p>
-                                        アカウントを削除すると、投稿した記事など、全てのデータが削除されます。<br>
-                                        <span style="color:#ff6363;">一度削除すると元には戻せませんのでご注意下さい。</span>
-                                    </p>
-                                    <p>ログイン中ユーザー：{{$user->name}}</p>
-                                    <input type="submit" value="アカウントを削除する" class="btn submit-btn" onclick="return confirm('ユーザー名：{{$user->name}} を削除して宜しいですか？');">
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </form>
-                    
-                </div>
-            </div>
+            <p>ログイン中ユーザー：{{$user->name}}</p>
+            <input class="submit-btn" type="submit" value="アカウントを削除する" onclick="return confirm('ユーザー名：{{$user->name}} を削除して宜しいですか？');">
         </div>
-    </div>
+    </form>
+   
 </div>
 @endsection

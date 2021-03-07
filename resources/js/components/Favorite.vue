@@ -1,16 +1,15 @@
 <template>
-  <div>
+  
     <button
       type="button"
-      class="action-icon btn m-0 p-1 shadow-none"
+      class="action-icon btn p-0"
     >
         <i class="fas fa-star"
            :class="{'icon-favorite':this.isFavorite}"
            @click="clickFavorite"
         ></i>
     </button>
-   
-  </div>
+    
 </template>
 
 <script>

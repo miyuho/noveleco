@@ -1,29 +1,39 @@
 @charset "UTF-8";
 body {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #f5ead7;
-  color: #877e7a;
+  background-image: url("../image/Melamine-wood-005.png");
+  color: #574528;
+  font-size: medium;
 }
 
-a {
-  text-decoration: none !important;
-  color: inherit;
+input, textarea {
+  outline: 0;
+  background-color: #f7f5f2;
+  padding: 6px 12px;
+  border: 1px solid #dbd6d3;
+  border-radius: 4px;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #b0a99d;
+  font-style: oblique;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #b0a99d;
+  font-style: oblique;
+}
+input::placeholder, textarea::placeholder {
+  color: #b0a99d;
+  font-style: oblique;
+}
+input:focus, textarea:focus {
+  border-color: #ab8771;
+}
+input:-webkit-autofill, textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #e5e8e3 inset;
+  -webkit-color: #2b2214;
 }
 
-a:hover {
-  　text-decoration: none !important;
-  color: inherit;
-}
-
-a:active {
-  opacity: 0.8;
-  　text-decoration: none !important;
-  color: inherit;
-}
-
-.card, .border-bottom, .img-thumbnail {
-  border-color: #dbd6d3 !important;
+button:active {
+  outline: 0;
 }
 
 /* ヘッダー 
@@ -32,80 +42,80 @@ header {
   background-image: url("../image/IMG_5236.jpg");
   background-repeat: repeat-x;
   background-size: contain;
-  height: 20vh;
-}
-
-.header-nav {
-  width: 100vh;
-  height: 100%;
-  display: inline-flex;
-  align-items: flex-end;
+  height: 150px;
 }
 
 .header-logo {
-  color: #fff !important;
+  width: 75%;
+  margin: 0 auto;
+  height: 150px;
+  position: relative;
+  font-weight: normal;
+}
+.header-logo a {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  font-size: 75px;
+  transform-origin: bottom;
+  transform: scaleY(1.3);
+}
+.header-logo a:hover {
+  text-decoration: none;
 }
 
-/* フォーム
----------------------------------------------------*/
-input::-moz-placeholder, textarea::-moz-placeholder {
-  color: #dbd6d3 !important;
-  font-style: oblique;
-}
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  color: #dbd6d3 !important;
-  font-style: oblique;
-}
-input::placeholder, textarea::placeholder {
-  color: #dbd6d3 !important;
-  font-style: oblique;
+/* ログイン
+---------------------------------------------------- */
+.container {
+  width: 50%;
+  background: #f7f5f2;
+  margin: 0 auto;
+  border: 1px solid #dbd6d3;
+  border-radius: 6px;
 }
 
-input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px #fff8f2 inset !important;
-}
-
-input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 1000px #fff8f2 inset !important;
-}
-
-.form-control, .form-control-file {
-  box-shadow: none !important;
-  outline: none !important;
-  border-color: #dbd6d3 !important;
-  color: #877e7a !important;
-}
-
-.form-control:focus, .form-control-file:focus {
-  box-shadow: none !important;
-  border-color: #ab8771 !important;
-}
-
-/* テキスト
--------------------------------------------------*/
 .content-title {
-  color: #6e6560;
+  font-size: 28px;
+  padding: 30px 0 10px 0;
+  border-bottom: 1px solid #dbd6d3;
 }
 
-/* ボタン
--------------------------------------------------- */
-.btn {
-  box-shadow: none !important;
+form {
+  text-align: center;
+  margin: 40px 0 40px 0;
+}
+
+.email, .password {
+  margin-bottom: 15px;
+  justify-content: center;
+}
+.email label, .password label {
+  width: 130px;
+  display: inline-block;
+  text-align: right;
+  padding-right: 20px;
+  margin-bottom: 0;
+  line-height: 39px;
+}
+.email input, .password input {
+  width: 270px;
+}
+
+.form-check {
+  margin-bottom: 8px;
 }
 
 .submit-btn {
-  color: white;
-  background-color: #e3923b;
-  border: 1px solid #ced4da;
+  padding: 6px 12px;
+  background-color: #656e5e;
+  border: 1px solid #8c8273;
+  border-radius: 4px;
+  color: #fff;
 }
-
-.submit-btn:hover {
-  color: white;
-  background-color: #d48a3b;
-}
-
 .submit-btn:active {
-  opacity: 0.7;
-  color: white;
-  background-color: #d48a3b;
+  background-color: #596052;
+}
+
+.form-check {
+  font-size: 14.5px;
 }

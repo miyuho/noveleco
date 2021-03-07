@@ -1942,7 +1942,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     initialIsBookmark: {
@@ -2098,7 +2097,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     initialIsFavorite: {
@@ -2207,7 +2205,6 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-//
 //
 //
 //
@@ -38654,22 +38651,17 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "button",
-      {
-        staticClass: "action-icon btn m-0 p-1 shadow-none",
-        attrs: { type: "button" }
-      },
-      [
-        _c("i", {
-          staticClass: "fas fa-bookmark",
-          class: { "icon-bookmark": this.isBookmark },
-          on: { click: _vm.clickBookmark }
-        })
-      ]
-    )
-  ])
+  return _c(
+    "button",
+    { staticClass: "action-icon btn", attrs: { type: "button" } },
+    [
+      _c("i", {
+        staticClass: "fas fa-bookmark",
+        class: { "icon-bookmark": this.isBookmark },
+        on: { click: _vm.clickBookmark }
+      })
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -38740,22 +38732,17 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "button",
-      {
-        staticClass: "action-icon btn m-0 p-1 shadow-none",
-        attrs: { type: "button" }
-      },
-      [
-        _c("i", {
-          staticClass: "fas fa-star",
-          class: { "icon-favorite": this.isFavorite },
-          on: { click: _vm.clickFavorite }
-        })
-      ]
-    )
-  ])
+  return _c(
+    "button",
+    { staticClass: "action-icon btn p-0", attrs: { type: "button" } },
+    [
+      _c("i", {
+        staticClass: "fas fa-star",
+        class: { "icon-favorite": this.isFavorite },
+        on: { click: _vm.clickFavorite }
+      })
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -38779,22 +38766,17 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "button",
-      {
-        staticClass: "action-icon btn m-0 p-1 shadow-none",
-        attrs: { type: "button" }
-      },
-      [
-        _c("i", {
-          staticClass: "fas fa-heart mr-1",
-          class: { "icon-like": this.isLike },
-          on: { click: _vm.clickLike }
-        })
-      ]
-    )
-  ])
+  return _c(
+    "button",
+    { staticClass: "action-icon btn", attrs: { type: "button" } },
+    [
+      _c("i", {
+        staticClass: "fas fa-heart",
+        class: { "icon-like": this.isLike },
+        on: { click: _vm.clickLike }
+      })
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -51340,6 +51322,28 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/account_config.scss":
+/*!********************************************!*\
+  !*** ./resources/sass/account_config.scss ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/admin_article.scss":
+/*!*******************************************!*\
+  !*** ./resources/sass/admin_article.scss ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -51351,10 +51355,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/sass/nav.scss":
-/*!*********************************!*\
-  !*** ./resources/sass/nav.scss ***!
-  \*********************************/
+/***/ "./resources/sass/article_create.scss":
+/*!********************************************!*\
+  !*** ./resources/sass/article_create.scss ***!
+  \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -51362,9 +51366,86 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/sass/no_nav.scss":
+/***/ "./resources/sass/article_edit.scss":
+/*!******************************************!*\
+  !*** ./resources/sass/article_edit.scss ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/article_show.scss":
+/*!******************************************!*\
+  !*** ./resources/sass/article_show.scss ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/bookmark.scss":
+/*!**************************************!*\
+  !*** ./resources/sass/bookmark.scss ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/each_account.scss":
+/*!******************************************!*\
+  !*** ./resources/sass/each_account.scss ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/favorite.scss":
+/*!**************************************!*\
+  !*** ./resources/sass/favorite.scss ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/home.scss":
+/*!**********************************!*\
+  !*** ./resources/sass/home.scss ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/login.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/login.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/mypage.scss":
 /*!************************************!*\
-  !*** ./resources/sass/no_nav.scss ***!
+  !*** ./resources/sass/mypage.scss ***!
   \************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
@@ -51373,17 +51454,62 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/profile_create.scss":
+/*!********************************************!*\
+  !*** ./resources/sass/profile_create.scss ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/profile_edit.scss":
+/*!******************************************!*\
+  !*** ./resources/sass/profile_edit.scss ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/register.scss":
+/*!**************************************!*\
+  !*** ./resources/sass/register.scss ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!********************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/nav.scss ./resources/sass/no_nav.scss ***!
-  \********************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/home.scss ./resources/sass/login.scss ./resources/sass/register.scss ./resources/sass/article_show.scss ./resources/sass/each_account.scss ./resources/sass/profile_create.scss ./resources/sass/profile_edit.scss ./resources/sass/article_create.scss ./resources/sass/article_edit.scss ./resources/sass/admin_article.scss ./resources/sass/mypage.scss ./resources/sass/bookmark.scss ./resources/sass/favorite.scss ./resources/sass/account_config.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /home/ec2-user/environment/noveleco/resources/js/app.js */"./resources/js/app.js");
 __webpack_require__(/*! /home/ec2-user/environment/noveleco/resources/sass/app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! /home/ec2-user/environment/noveleco/resources/sass/nav.scss */"./resources/sass/nav.scss");
-module.exports = __webpack_require__(/*! /home/ec2-user/environment/noveleco/resources/sass/no_nav.scss */"./resources/sass/no_nav.scss");
+__webpack_require__(/*! /home/ec2-user/environment/noveleco/resources/sass/home.scss */"./resources/sass/home.scss");
+__webpack_require__(/*! /home/ec2-user/environment/noveleco/resources/sass/login.scss */"./resources/sass/login.scss");
+__webpack_require__(/*! /home/ec2-user/environment/noveleco/resources/sass/register.scss */"./resources/sass/register.scss");
+__webpack_require__(/*! /home/ec2-user/environment/noveleco/resources/sass/article_show.scss */"./resources/sass/article_show.scss");
+__webpack_require__(/*! /home/ec2-user/environment/noveleco/resources/sass/each_account.scss */"./resources/sass/each_account.scss");
+__webpack_require__(/*! /home/ec2-user/environment/noveleco/resources/sass/profile_create.scss */"./resources/sass/profile_create.scss");
+__webpack_require__(/*! /home/ec2-user/environment/noveleco/resources/sass/profile_edit.scss */"./resources/sass/profile_edit.scss");
+__webpack_require__(/*! /home/ec2-user/environment/noveleco/resources/sass/article_create.scss */"./resources/sass/article_create.scss");
+__webpack_require__(/*! /home/ec2-user/environment/noveleco/resources/sass/article_edit.scss */"./resources/sass/article_edit.scss");
+__webpack_require__(/*! /home/ec2-user/environment/noveleco/resources/sass/admin_article.scss */"./resources/sass/admin_article.scss");
+__webpack_require__(/*! /home/ec2-user/environment/noveleco/resources/sass/mypage.scss */"./resources/sass/mypage.scss");
+__webpack_require__(/*! /home/ec2-user/environment/noveleco/resources/sass/bookmark.scss */"./resources/sass/bookmark.scss");
+__webpack_require__(/*! /home/ec2-user/environment/noveleco/resources/sass/favorite.scss */"./resources/sass/favorite.scss");
+module.exports = __webpack_require__(/*! /home/ec2-user/environment/noveleco/resources/sass/account_config.scss */"./resources/sass/account_config.scss");
 
 
 /***/ })

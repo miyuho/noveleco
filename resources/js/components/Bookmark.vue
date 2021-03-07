@@ -1,8 +1,8 @@
 <template>
-  <div>
+  
     <button
       type="button"
-      class="action-icon btn m-0 p-1 shadow-none"
+      class="action-icon btn"
     >
         <i class="fas fa-bookmark"
            :class="{'icon-bookmark':this.isBookmark}"
@@ -10,7 +10,6 @@
         ></i>
     </button>
     
-  </div>
 </template>
 
 <script>

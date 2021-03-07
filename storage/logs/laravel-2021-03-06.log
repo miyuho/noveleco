@@ -1,0 +1,9 @@
+[2021-03-06 02:58:35] local.ERROR: Command "serve--port=8080" is not defined. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"serve--port=8080\" is not defined. at /home/ec2-user/environment/noveleco/vendor/symfony/console/Application.php:676)
+[stacktrace]
+#0 /home/ec2-user/environment/noveleco/vendor/symfony/console/Application.php(237): Symfony\\Component\\Console\\Application->find('serve--port=808...')
+#1 /home/ec2-user/environment/noveleco/vendor/symfony/console/Application.php(149): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /home/ec2-user/environment/noveleco/vendor/laravel/framework/src/Illuminate/Console/Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /home/ec2-user/environment/noveleco/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /home/ec2-user/environment/noveleco/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 

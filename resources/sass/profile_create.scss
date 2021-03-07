@@ -1,0 +1,242 @@
+body {
+  background-color: #f2e0c4;
+  background-image: url("../image/Melamine-wood-005.png");
+  color: hsl(37, 37%, 25%);
+  font-size: medium;
+}
+
+main {
+  margin: 50px 0;
+}
+
+/* ヘッダー 
+-------------------------------------------------*/
+header {
+  background-image: url('../image/IMG_5236.jpg');
+  background-repeat: repeat-x;
+  background-size: contain;
+  height: 150px;
+}
+.header-logo {
+  width: 75%;
+  margin: 0 auto;
+  
+  height: 100%;
+  font-weight: normal;
+  position: relative;
+  
+  a {
+    position: absolute;
+    bottom: -8px;
+    color: #fff;
+    font-size: 75px;
+    transform-origin: bottom;
+    transform: scaleY(1.3);
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+
+/* プロフィール作成
+---------------------------------------------------- */
+.container {
+  width: 65%;
+  background: #f7f5f2;
+  margin: 0 auto;
+  border: 1px solid #8c8273;
+  border-radius: 6px;
+}
+
+.content-title {
+  font-size: 28px;
+  padding: 30px 0 10px 5px;
+  border-bottom: 1px solid #8c8273;
+}
+
+form {
+  margin: 40px 20px;
+}
+
+.profile {
+    display: flex;
+    width: 100%;
+    padding-bottom: 8px;
+}
+
+.select-img {
+    width: 250px;
+    margin-right: 20px;
+    
+    img {
+        width: 100%;
+        height: 250px;
+        padding: 2px;
+        border: 1px solid #b0a99d;
+        object-fit: contain;
+    }
+    
+    input {
+        display: inline-block;
+        font-size: 14.5px;
+        display: block;
+        margin-top: 8px;
+        
+        &:focus {
+          outline: 0;
+        }
+    }
+}
+
+.text {
+    flex: 1;
+    
+    .user-name {
+      color: #ad2b00;
+    }
+    
+    textarea {
+      width: 100%;
+      height: 215px;
+      outline: 0;
+      background-color: #fbfaf9;
+      color: hsl(37, 37%, 25%);
+      padding: 6px 12px;
+      border: 1px solid #dbd6d3;
+      border-radius: 4px;
+      
+      &::placeholder {
+        color: #c4beb3;
+        font-style: oblique;
+      }
+      &:focus {
+        border-color: #b5ac9f;
+      }
+      &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px #e5e8e3 inset;
+        -webkit-color: #2b2214;
+      }
+    }
+}
+
+.action {
+    text-align: center;
+    
+    a,i {
+      color: hsl(37, 10%, 60%);
+      
+      &:hover {
+        text-decoration: none;
+      }
+      
+      &:active, &:focus {
+        opacity: 0.9;
+        outline: 0;
+      }
+    }
+}
+
+.submit-btn {
+  padding: 6px 12px;
+  background-color: hsl(93, 8%, 40%);
+  border: 1px solid #8c8273;
+  border-radius: 4px;
+  color: #fff;
+  margin-right: 20px;
+  
+  &:hover {
+    opacity: 0.9;
+  }
+  
+  &:active, &:focus {
+    background-color: hsl(93, 8%, 35%);
+    outline: 0;
+  }
+}
+
+
+/* レスポンシブデザイン
+---------------------------------------------------------------------------- */
+/*medium
+-----------------------*/
+@media (max-width: 1025px) {
+  /*ヘッダー*/
+  .header-logo {
+    width: 95%;
+  }
+  /*メイン*/
+  .container {
+    width: 75%;
+  }
+}
+
+
+/*small
+-----------------------*/
+@media (max-width: 650px) {
+  body {
+    font-size: small;
+  }
+  
+  /*ヘッダー*/
+  header {
+    height: 125px;
+    background-size: cover;
+  }
+  .header-logo {
+    a {
+     font-size: 50px;
+     bottom: -5px;
+    }
+  }
+  
+  /*メイン*/
+  main {
+    margin: 25px 0;
+  }
+  
+  .container {
+    width: 90%;
+  }
+  
+  .content-title {
+    font-size: 18px;
+    padding: 20px 0 10px 5px;
+  }
+  
+  form {
+    margin: 15px 0 20px 0;
+    text-align: center;
+  }
+  
+  .profile {
+    display: block;
+    margin: 0 auto;
+    padding-top: 25px;
+    position: relative;
+  }
+  
+  .user-name {
+    font-size: 18px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+  
+  .select-img {
+    width: 200px;
+    margin: 0;
+    padding-bottom: 8px;
+    
+    img {
+      height: 200px;
+    }
+    
+    input {
+      font-size: 10px;
+      padding-left: 10px;
+    }
+  }
+}

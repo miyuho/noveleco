@@ -12,28 +12,15 @@
 
         <link rel="dns-prefetch" href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
         <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
-        <link href="{{ secure_asset('css/no_nav.css') }}" rel="stylesheet">
+        @yield('css')
     </head>
     <body>
         <div id="app">
             <header>
-                <div class="container">
-                    <div class="row header-nav">
-                        <div class="col-md-3">
-                            <h1><a class="header-logo" href="{{ url('/') }}">noveLeco</a></h1>
-                        </div>
-                    </div>
-                </div>
+                <h1 class="header-logo"><a href="{{ url('/') }}">noveLeco</a></h1>
             </header>
-             @if (session('account_created_message'))
-                <div class="account_created_message alert text-center py-2 my-0" style="background-color:#c1d1b0;">
-                    {{ session('account_created_message') }}
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            @endif
-            <main class="my-4">
+            
+            <main>
                 @yield('content')
             </main>
         </div>

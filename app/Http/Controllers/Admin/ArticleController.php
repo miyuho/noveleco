@@ -27,8 +27,10 @@ class ArticleController extends Controller
         $form = $request->all();
         
         if (isset($form['book_image'])) {
-            $path = Storage::disk('s3')->putFile('/',$form['book_image'],'public');
-            $article->book_image_path = Storage::disk('s3')->url($path);
+            $path = $request->file('book_image')->store('image', 'public');
+            $article->book_image_path = basename($path);
+            // $path = Storage::disk('s3')->putFile('/',$form['book_image'],'public');
+            // $article->book_image_path = Storage::disk('s3')->url($path);
         }else {
             $article->book_image_path = null;
         }
@@ -78,15 +80,17 @@ class ArticleController extends Controller
         if ($request->remove == 'true'){
             $article_form['book_image_path'] = null;
         } elseif ($request->file('book_image')){
-            $path = Storage::disk('s3')->putFile('/',$article_form['book_image_path'],'public');
-            $article_form->book_image_path = Storage::disk('s3')->url($path);
+            $path = $request->file('book_image')->store('public/image');
+            $article_form['book_image_path'] = basename($path);
+            // $path = Storage::disk('s3')->putFile('/',$article_form['book_image'],'public');
+            // $article_form['book_image_path'] = Storage::disk('s3')->url($path);
         } else {
             $article_form['book_image_path'] = $article->book_image_path;
         }
         
         unset($article_form['_token']);
         unset($article_form['remove']);
-        unset($article_form['book_image_path']);
+        unset($article_form['book_image']);
         
         $article->fill($article_form)->save();
         

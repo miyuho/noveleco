@@ -1,16 +1,15 @@
 <template>
-  <div>
+  
     <button
       type="button"
-      class="action-icon btn m-0 p-1 shadow-none"
+      class="action-icon btn"
     >
-      <i class="fas fa-heart mr-1"
+      <i class="fas fa-heart"
          :class="{'icon-like':this.isLike}"
          @click="clickLike"
       ></i>
     </button>
     
-  </div>
 </template>
 
 <script>

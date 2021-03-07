@@ -1,0 +1,15 @@
+[2021-03-04 08:34:05] local.ERROR: The "--poort" option does not exist. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): The \"--poort\" option does not exist. at /home/ec2-user/environment/noveleco/vendor/symfony/console/Input/ArgvInput.php:201)
+[stacktrace]
+#0 /home/ec2-user/environment/noveleco/vendor/symfony/console/Input/ArgvInput.php(143): Symfony\\Component\\Console\\Input\\ArgvInput->addLongOption('poort', '8080')
+#1 /home/ec2-user/environment/noveleco/vendor/symfony/console/Input/ArgvInput.php(79): Symfony\\Component\\Console\\Input\\ArgvInput->parseLongOption('--poort=8080')
+#2 /home/ec2-user/environment/noveleco/vendor/symfony/console/Input/Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#3 /home/ec2-user/environment/noveleco/vendor/symfony/console/Command/Command.php(214): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#4 /home/ec2-user/environment/noveleco/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#5 /home/ec2-user/environment/noveleco/vendor/symfony/console/Application.php(1009): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 /home/ec2-user/environment/noveleco/vendor/symfony/console/Application.php(273): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Foundation\\Console\\ServeCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 /home/ec2-user/environment/noveleco/vendor/symfony/console/Application.php(149): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 /home/ec2-user/environment/noveleco/vendor/laravel/framework/src/Illuminate/Console/Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 /home/ec2-user/environment/noveleco/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 /home/ec2-user/environment/noveleco/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 {main}
+"} 
