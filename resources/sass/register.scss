@@ -4,9 +4,6 @@ body {
   color: hsl(37, 37%, 25%);
   font-size: medium;
 }
-main {
-  margin: 50px 0;
-}
 
 input{
   outline: 0;
@@ -59,8 +56,12 @@ header {
   }
 }
 
-/* アカウント作成
+/* メイン
 ---------------------------------------------------- */
+main {
+  margin: 50px 0;
+}
+
 .container {
   width: 60%;
   background: #f7f5f2;
