@@ -10,7 +10,7 @@
         
         <div class="user-img">
             @if ( $user->icon_image_path != null )
-                <img src="{{ asset('/storage/image/'.$user->icon_image_path) }}" alt="プロフィール画像">
+                <img src="{{ $user->icon_image_path }}" alt="プロフィール画像">
             @else
                 <img src="{{ asset('/image/no_image.png') }}" alt="画像がありません">
             @endif
@@ -38,7 +38,7 @@
             
             <div class="article-item">
                 @if ( $article->book_image_path != null )
-                    <img src="{{ asset('/storage/image/'.$article->book_image_path) }}" alt="本の画像">
+                    <img src="{{ $article->book_image_path }}" alt="本の画像">
                 @else
                     <img src="{{ asset('/image/no_image.png') }}" alt="画像がありません">
                 @endif

@@ -11,7 +11,7 @@
         
         <div class="book-img">
             @if ( $article->book_image_path != null )
-                <img src="{{ asset('/storage/image/'.$article->book_image_path) }}" alt="本の画像">
+                <img src="{{ $article->book_image_path }}" alt="本の画像">
             @else
                 <img src="{{ asset('/image/no_image.png') }}" alt="画像がありません">
             @endif
@@ -21,7 +21,7 @@
             
             <div class="user">
                 <a href="{{ action('EachAccountController@index', ['id' => $user->id]) }}">
-                    <img class="icon" src="{{ asset('/storage/image/'.$user->icon_image_path) }}">
+                    <img class="icon" src="{{ $user->icon_image_path }}">
                     <span class="name">{{ $user->name }}</span>
                 </a>
                 <span class="date">

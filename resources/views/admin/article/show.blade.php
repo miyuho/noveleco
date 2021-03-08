@@ -10,7 +10,7 @@
     <div class="top">
         <div class="book-img">
             @if ( $article->book_image_path != null )
-                <img src="{{ asset('/storage/image/'.$article->book_image_path) }}" alt="本の画像">
+                <img src="{{ $article->book_image_path }}" alt="本の画像">
             @else
                 <img src="{{ asset('/image/no_image.png') }}" alt="画像がありません">
             @endif

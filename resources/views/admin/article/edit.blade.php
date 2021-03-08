@@ -24,7 +24,7 @@
             <div>
                 <label class="select-img">
                     @if ($article_form->book_image_path != null)
-                        <img src="{{ asset('/storage/image/'.$article_form->book_image_path) }}" alt="本の画像">
+                        <img src="{{ $article_form->book_image_path }}" alt="本の画像">
                         <input type="file" name="book_image">
                     @else
                         <img src="{{ asset('/image/no_image.png') }}" alt="本の画像">

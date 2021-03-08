@@ -17,7 +17,7 @@
             <div>
                 <label class="select-img">
                     @if ( $user_form->icon_image_path != null )
-                        <img src="{{ asset('/storage/image/'.$user_form->icon_image_path) }}" alt="プロフィール画像">
+                        <img src="{{ $user_form->icon_image_path }}" alt="プロフィール画像">
                         <input type="file" name="icon_image">
                     @else
                         <img src="{{ asset('/image/no_image.png') }}" alt="画像がありません">

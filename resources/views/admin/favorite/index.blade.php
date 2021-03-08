@@ -14,7 +14,7 @@
             
             <div class="user-img">
                 @if ( $favorite_user->icon_image_path != null )
-                    <img src="{{ asset('/storage/image/'.$favorite_user->icon_image_path) }}" alt="ユーザーの画像">
+                    <img src="{{ $favorite_user->icon_image_path }}" alt="ユーザーの画像">
                 @else
                     <img src="{{ asset('/image/no_image.png') }}" alt="画像がありません">
                 @endif
