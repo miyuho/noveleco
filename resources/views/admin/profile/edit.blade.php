@@ -2,7 +2,7 @@
 
 @section('title', 'プロフィール編集')
 
-@section('css')<link href="{{ secure_asset('css/profile_edit.css') }}" rel="stylesheet">@endsection
+@section('css')<link href="{{ mix('css/profile_edit.css') }}" rel="stylesheet">@endsection
 
 @section('content')
 <div class="container">

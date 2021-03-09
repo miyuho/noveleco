@@ -2,7 +2,7 @@
 
 @section('title', 'noveleco')
 
-@section('css')<link href="{{ secure_asset('css/home.css') }}" rel="stylesheet">@endsection
+@section('css')<link href="{{ mix('css/home.css') }}" rel="stylesheet">@endsection
 
 @section('content')
     <div class="container">

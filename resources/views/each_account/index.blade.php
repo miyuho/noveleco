@@ -2,7 +2,7 @@
 
 @section('title', $each_account->name.'さんのページ')
 
-@section('css')<link href="{{ secure_asset('css/each_account.css') }}" rel="stylesheet">@endsection
+@section('css')<link href="{{ mix('css/each_account.css') }}" rel="stylesheet">@endsection
 
 @section('content')
     

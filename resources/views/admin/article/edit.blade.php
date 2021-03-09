@@ -2,7 +2,7 @@
 
 @section('title', '記事の編集')
 
-@section('css')<link href="{{ secure_asset('css/article_edit.css') }}" rel="stylesheet">@endsection
+@section('css')<link href="{{ mix('css/article_edit.css') }}" rel="stylesheet">@endsection
 
 @section('content')
 <div class="container">

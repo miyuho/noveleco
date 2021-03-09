@@ -2,7 +2,7 @@
 
 @section('title', 'アカウント設定')
 
-@section('css')<link href="{{ secure_asset('css/account_config.css') }}" rel="stylesheet">@endsection
+@section('css')<link href="{{ mix('css/account_config.css') }}" rel="stylesheet">@endsection
 
 @section('content')
 <div class="container">

@@ -8,10 +8,10 @@
 
         <title>@yield('title')</title>
 
-        <script src="{{ secure_asset('js/app.js') }}" defer></script>
+        <script src="{{ mix('js/app.js') }}" defer></script>
 
         <link rel="dns-prefetch" href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
-        <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ mix('css/app.css') }}" rel="stylesheet">
         @yield('css')
     </head>
     <body>

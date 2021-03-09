@@ -2,7 +2,7 @@
 
 @section('title', $article->book_title)
 
-@section('css')<link href="{{ secure_asset('css/article_show.css') }}" rel="stylesheet">@endsection
+@section('css')<link href="{{ mix('css/article_show.css') }}" rel="stylesheet">@endsection
 
 @section('content')
 <div class="container">

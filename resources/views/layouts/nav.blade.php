@@ -8,7 +8,7 @@
         
         <title>@yield('title')</title>
         
-        <script src="{{ secure_asset('js/app.js') }}" defer></script>
+        <script src="{{ mix('js/app.js') }}" defer></script>
         
         <!-- JQuery -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -17,7 +17,7 @@
         <script src="https://kit.fontawesome.com/0c6142f230.js" crossorigin="anonymous"></script>
         
         <link rel="dns-prefetch" href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
-        <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ mix('css/app.css') }}" rel="stylesheet">
         @yield('css')
     </head>
     <body>

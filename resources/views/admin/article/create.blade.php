@@ -2,7 +2,7 @@
 
 @section('title', '新規作成')
 
-@section('css')<link href="{{ secure_asset('css/article_create.css') }}" rel="stylesheet">@endsection
+@section('css')<link href="{{ mix('css/article_create.css') }}" rel="stylesheet">@endsection
 
 @section('content')
 <div class="container">

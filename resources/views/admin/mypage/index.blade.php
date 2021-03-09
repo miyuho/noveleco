@@ -2,7 +2,7 @@
 
 @section('title', 'マイページ')
 
-@section('css')<link href="{{ secure_asset('css/mypage.css') }}" rel="stylesheet">@endsection
+@section('css')<link href="{{ mix('css/mypage.css') }}" rel="stylesheet">@endsection
 
 @section('content')
 
