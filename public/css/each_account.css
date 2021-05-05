@@ -1,1 +1,404 @@
-@charset "UTF-8";body{background-color:#f2e0c4;background-image:url(../image/Melamine-wood-005.png);color:#574528;font-size:medium}a{text-decoration:none!important;color:inherit}a:hover{　text-decoration:none!important;　color:inherit}a:active{opacity:.9;　text-decoration:none}li{list-style:none}header{background-image:url(../image/IMG_5236.jpg);background-repeat:repeat-x;background-size:contain;height:150px}.header-nav{height:100%;width:75%;margin:0 auto;display:flex;justify-content:space-between}.header-logo{height:100%;position:relative;font-weight:400}.header-logo a{position:absolute;bottom:-8px;color:#fff;font-size:75px;transform-origin:bottom;transform:scaleY(1.3)}.header-right{height:100%;display:flex;align-items:flex-end;margin-bottom:0}.header-right li>a{color:#fff;font-size:20px}.dropdown-menu{background-color:#fbfaf9;border-color:#8c8273}.dropdown-item{color:#574528}.dropdown-item:hover{color:#574528}.dropdown-item:active,.dropdown-item:hover{background-color:#e5e8e3}.menu-icon{display:none}.overlay{opacity:0;pointer-events:none}main{margin:50px 0}.profile{width:70%;background:#f0eee9;margin:0 auto;border-radius:6px;border:1px solid #8c8273;border-bottom:3px solid #572828;display:flex;padding:30px 25px 40px}.action{text-align:right}.action-icon{font-size:30px}.action-icon,.action-icon:hover{color:#bababa}.action-icon:focus{outline:0;box-shadow:none}.icon-favorite{color:#fad400}.user-img img{width:250px;height:290px;padding:2px;border:1px solid #b09e99;-o-object-fit:contain;object-fit:contain;margin-right:40px}.profile-right{flex:1;color:#572828}.user-name{font-size:32px;color:#ad2b00}.introduction{font-size:18px;margin:0}.partition{background:#e3d2c1;border:1px solid #8c8273;border-radius:6px 6px 0 0;line-height:2;text-align:center}.article-wrapper,.partition{width:70%;margin:0 auto}.article{background:#f7f5f2;border:1px solid #8c8273;border-radius:6px;display:flex}.article .article-item{width:230px;margin:25px auto;text-align:center}.article img{height:170px;width:170px;padding:2px;border:1px solid #b0a99d;-o-object-fit:contain;object-fit:contain}.article:hover{color:inherit}.article-txt{margin:30px 20px;flex:1}.article-txt p{margin-bottom:8px}.book-title{font-size:25px}.body,.no-articles{color:#a39b8f}.no-articles{width:70%;background:#f7f5f2;margin:0 auto;border:1px solid #8c8273;border-radius:6px;text-align:center;padding:25px 0}@media (max-width:1025px){.header-nav{width:95%}.article-wrapper,.partition,.profile{width:90%}}@media (max-width:650px){body{font-size:small}header{height:125px;background-size:cover}.header-logo a{font-size:50px;bottom:-5px}.header-right{display:none}.menu-icon{display:block;font-size:32px;color:#fff;align-self:flex-end;cursor:pointer}#close{position:absolute;top:50px;right:10px;font-size:35px;cursor:pointer}.overlay.show{opacity:1;transform:translateX(0);transition:opacity .4s,transform .4s;pointer-events:auto}.overlay.hide{opacity:0;transition:opacity .3s ease-in,transform .4s}.overlay,.overlay.hide{transform:translateX(100%)}.overlay{width:100%;position:fixed;top:0;bottom:0;right:0;background:#ede1ce;color:#574528;z-index:5;transition:transform .4s}.overlay .auth-name{font-size:14px;border-bottom:1px solid #c4beb3;padding:75px 0 2px 5px;margin-bottom:0}.overlay .sp-nav{padding-left:0;margin-bottom:0;text-align:center}.overlay .sp-nav li{line-height:4;border-bottom:1px solid #c4beb3}.overlay .sp-nav li a{display:block}.overlay .sp-link{width:100%;height:100%}.overlay .sp-link:hover{color:inherit}.overlay .sp-link:active{color:inherit;opacity:.9}main{margin:25px 0}.profile{display:block;padding:40px 20px 30px;text-align:center;position:relative}.action-icon{position:absolute;top:-3px;right:4px}.user-img{text-align:center;padding-bottom:8px}.user-img img{width:200px;height:230px;margin:0}.user-name{font-size:20px}.introduction{font-size:small}.article{display:block;text-align:center;padding:20px 15px 15px;position:relative}.article .article-item{width:100%;margin:0}.article img{height:130px;width:130px}.article-txt{margin:0}.article-txt p{font-size:10px;margin-bottom:0}.book-title{font-size:16px;margin-bottom:0;padding-top:10px}.subtitle{padding-bottom:5px}}
+@charset "UTF-8";
+body {
+  background-color: #f2e0c4;
+  background-image: url("../image/Melamine-wood-005.png");
+  color: #574528;
+  font-size: medium;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit;
+}
+a:hover {
+  　text-decoration: none !important;
+  　color: inherit;
+}
+a:active {
+  opacity: 0.9;
+  　text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* ヘッダー
+------------------------------------------------------------------*/
+header {
+  background-image: url("../image/IMG_5236.jpg");
+  background-repeat: repeat-x;
+  background-size: contain;
+  height: 150px;
+}
+
+.header-nav {
+  height: 100%;
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-logo {
+  height: 100%;
+  position: relative;
+  font-weight: normal;
+}
+.header-logo a {
+  position: absolute;
+  bottom: -8px;
+  color: #fff;
+  font-size: 75px;
+  transform-origin: bottom;
+  transform: scaleY(1.3);
+}
+
+.header-right {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 0;
+}
+.header-right li > a {
+  color: #fff;
+  font-size: 20px;
+}
+
+.dropdown-menu {
+  background-color: #fbfaf9;
+  border-color: #8c8273;
+}
+
+.dropdown-item {
+  color: #574528;
+}
+.dropdown-item:hover {
+  background-color: #e5e8e3;
+  color: #574528;
+}
+.dropdown-item:active {
+  background-color: #e5e8e3;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.overlay {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* メイン
+---------------------------------------------------------------------- */
+main {
+  margin: 50px 0;
+}
+
+/* プロフィール */
+.profile {
+  width: 70%;
+  background: #f0eee9;
+  margin: 0 auto;
+  border: 1px solid #8c8273;
+  border-radius: 6px;
+  border-bottom: 3px solid #572828;
+  display: flex;
+  padding: 30px 25px 40px 25px;
+}
+
+.action {
+  text-align: right;
+}
+
+.action-icon {
+  font-size: 30px;
+  color: #bababa;
+}
+.action-icon:hover {
+  color: #bababa;
+}
+.action-icon:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.icon-favorite {
+  color: #fad400;
+}
+
+.user-img img {
+  width: 250px;
+  height: 290px;
+  padding: 2px;
+  border: 1px solid #b09e99;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-right: 40px;
+}
+
+.profile-right {
+  flex: 1;
+  color: #572828;
+}
+
+.user-name {
+  font-size: 32px;
+  color: #ad2b00;
+}
+
+.introduction {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* 投稿記事 */
+.partition {
+  width: 70%;
+  background: #e3d2c1;
+  margin: 0 auto;
+  border: 1px solid #8c8273;
+  border-radius: 6px 6px 0 0;
+  line-height: 2;
+  text-align: center;
+}
+
+.article-wrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.article {
+  background: #f7f5f2;
+  border: 1px solid #8c8273;
+  border-radius: 6px;
+  display: flex;
+}
+.article .article-item {
+  width: 230px;
+  margin: 25px auto;
+  text-align: center;
+}
+.article img {
+  height: 170px;
+  width: 170px;
+  padding: 2px;
+  border: 1px solid #b0a99d;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.article:hover {
+  color: inherit;
+}
+
+.article-txt {
+  margin: 30px 20px;
+  flex: 1;
+}
+.article-txt p {
+  margin-bottom: 8px;
+}
+
+.book-title {
+  font-size: 25px;
+}
+
+.body {
+  color: #a39b8f;
+}
+
+.no-articles {
+  width: 70%;
+  background: #f7f5f2;
+  margin: 0 auto;
+  border: 1px solid #8c8273;
+  border-radius: 6px;
+  text-align: center;
+  padding: 25px 0;
+  color: #a39b8f;
+}
+
+/* レスポンシブデザイン
+---------------------------------------------------------------------------- */
+/*medium
+-----------------------*/
+@media (max-width: 1025px) {
+  /*ヘッダー*/
+  .header-nav {
+    width: 95%;
+  }
+
+  /*メイン*/
+  .profile, .partition, .article-wrapper {
+    width: 90%;
+  }
+}
+/*small
+-----------------------*/
+@media (max-width: 650px) {
+  body {
+    font-size: small;
+  }
+
+  /*ヘッダー*/
+  header {
+    height: 125px;
+    background-size: cover;
+  }
+
+  .header-logo a {
+    font-size: 50px;
+    bottom: -5px;
+  }
+
+  .header-right {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+    font-size: 32px;
+    color: #fff;
+    align-self: flex-end;
+    cursor: pointer;
+  }
+
+  #close {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    font-size: 35px;
+    cursor: pointer;
+  }
+
+  .overlay.show {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.4s, transform 0.4s;
+    pointer-events: auto;
+  }
+
+  .overlay.hide {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.3s ease-in, transform 0.4s;
+  }
+
+  .overlay {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #ede1ce;
+    color: #574528;
+    z-index: 5;
+    transform: translateX(100%);
+    transition: transform 0.4s;
+  }
+
+  .overlay .auth-name {
+    font-size: 14px;
+    border-bottom: 1px solid #c4beb3;
+    padding: 75px 0 2px 5px;
+    margin-bottom: 0;
+  }
+
+  .overlay .sp-nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .overlay .sp-nav li {
+    line-height: 4;
+    border-bottom: 1px solid #c4beb3;
+  }
+  .overlay .sp-nav li a {
+    display: block;
+  }
+
+  .overlay .sp-link {
+    width: 100%;
+    height: 100%;
+  }
+  .overlay .sp-link:hover {
+    color: inherit;
+  }
+  .overlay .sp-link:active {
+    color: inherit;
+    opacity: 0.9;
+  }
+
+  /*メイン
+  ------------------------------*/
+  main {
+    margin: 25px 0;
+  }
+
+  /*プロフィール*/
+  .profile {
+    display: block;
+    padding: 40px 20px 30px 20px;
+    text-align: center;
+    position: relative;
+  }
+
+  .action-icon {
+    position: absolute;
+    top: -3px;
+    right: 4px;
+  }
+
+  .user-img {
+    text-align: center;
+    padding-bottom: 8px;
+  }
+  .user-img img {
+    width: 200px;
+    height: 230px;
+    margin: 0;
+  }
+
+  .user-name {
+    font-size: 20px;
+  }
+
+  .introduction {
+    font-size: small;
+  }
+
+  /*投稿記事*/
+  .article {
+    display: block;
+    text-align: center;
+    padding: 20px 15px 15px 15px;
+    position: relative;
+  }
+  .article .article-item {
+    width: 100%;
+    margin: 0;
+  }
+  .article img {
+    height: 130px;
+    width: 130px;
+  }
+
+  .article-txt {
+    margin: 0;
+  }
+  .article-txt p {
+    font-size: 10px;
+    margin-bottom: 0;
+  }
+
+  .book-title {
+    font-size: 16px;
+    margin-bottom: 0;
+    padding-top: 10px;
+  }
+
+  .subtitle {
+    padding-bottom: 5px;
+  }
+}

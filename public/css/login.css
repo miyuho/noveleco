@@ -1,1 +1,202 @@
-body{background-color:#f2e0c4;background-image:url(../image/Melamine-wood-005.png);color:#574528;font-size:medium}header{background-image:url(../image/IMG_5236.jpg);background-repeat:repeat-x;background-size:contain;height:150px}.header-logo{width:75%;margin:0 auto;height:100%;font-weight:400;position:relative}.header-logo a{position:absolute;bottom:-8px;color:#fff;font-size:75px;transform-origin:bottom;transform:scaleY(1.3)}.header-logo a:hover{text-decoration:none}main{margin:50px 0}.container{width:60%;background:#f7f5f2;margin:0 auto;border:1px solid #8c8273;border-radius:6px}.content-title{font-size:28px;padding:30px 0 10px 5px;border-bottom:1px solid #8c8273}form{text-align:center;margin:40px 0}input{outline:0;background-color:#fbfaf9;color:#574528;padding:6px 12px;border:1px solid #dbd6d3;border-radius:4px}input::-moz-placeholder{color:#c4beb3;font-style:oblique}input:-ms-input-placeholder{color:#c4beb3;font-style:oblique}input::placeholder{color:#c4beb3;font-style:oblique}input:focus{border-color:#b5ac9f}input:-webkit-autofill{-webkit-box-shadow:0 0 0 1000px #e5e8e3 inset;-webkit-color:#2b2214}.email,.password{margin-bottom:15px;justify-content:center}.email label,.password label{width:130px;display:inline-block;text-align:right;padding-right:20px;margin-bottom:0;line-height:39px}.email input,.password input{width:270px}.form-check{padding-left:0;font-size:14.5px;margin-bottom:16px}.form-check label{margin-bottom:0}.submit-btn{padding:6px 12px;background-color:#656e5e;border:1px solid #8c8273;border-radius:4px;color:#fff}.submit-btn:hover{opacity:.9}.submit-btn:active,.submit-btn:focus{background-color:#596052;outline:0}@media (max-width:1025px){.header-logo{width:95%}.container{width:75%}}@media (max-width:650px){body{font-size:small}header{height:125px;background-size:cover}.header-logo a{font-size:50px;bottom:-5px}main{margin:25px 0}.container{width:90%}.content-title{font-size:18px;padding:20px 0 10px 5px}form{margin:20px 0}.email,.password{width:90%;padding-bottom:8px;margin:0 auto}.email label,.password label{display:block;text-align:start;width:auto;line-height:normal}.email input,.password input{width:100%;text-align:start}.form-check{width:100%;font-size:12px;margin-top:8px}}
+@charset "UTF-8";
+body {
+  background-color: #f2e0c4;
+  background-image: url("../image/Melamine-wood-005.png");
+  color: #574528;
+  font-size: medium;
+}
+
+/* ヘッダー 
+-------------------------------------------------*/
+header {
+  background-image: url("../image/IMG_5236.jpg");
+  background-repeat: repeat-x;
+  background-size: contain;
+  height: 150px;
+}
+
+.header-logo {
+  width: 75%;
+  margin: 0 auto;
+  height: 100%;
+  font-weight: normal;
+  position: relative;
+}
+.header-logo a {
+  position: absolute;
+  bottom: -8px;
+  color: #fff;
+  font-size: 75px;
+  transform-origin: bottom;
+  transform: scaleY(1.3);
+}
+.header-logo a:hover {
+  text-decoration: none;
+}
+
+/* メイン
+---------------------------------------------------- */
+main {
+  margin: 50px 0;
+}
+
+.container {
+  width: 60%;
+  background: #f7f5f2;
+  margin: 0 auto;
+  border: 1px solid #8c8273;
+  border-radius: 6px;
+}
+
+.content-title {
+  font-size: 28px;
+  padding: 30px 0 10px 5px;
+  border-bottom: 1px solid #8c8273;
+}
+
+form {
+  text-align: center;
+  margin: 40px 0;
+}
+
+input {
+  outline: 0;
+  background-color: #fbfaf9;
+  color: #574528;
+  padding: 6px 12px;
+  border: 1px solid #dbd6d3;
+  border-radius: 4px;
+}
+input::-moz-placeholder {
+  color: #c4beb3;
+  font-style: oblique;
+}
+input:-ms-input-placeholder {
+  color: #c4beb3;
+  font-style: oblique;
+}
+input::placeholder {
+  color: #c4beb3;
+  font-style: oblique;
+}
+input:focus {
+  border-color: #b5ac9f;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #e5e8e3 inset;
+  -webkit-color: #2b2214;
+}
+
+.email, .password {
+  margin-bottom: 15px;
+  justify-content: center;
+}
+.email label, .password label {
+  width: 130px;
+  display: inline-block;
+  text-align: right;
+  padding-right: 20px;
+  margin-bottom: 0;
+  line-height: 39px;
+}
+.email input, .password input {
+  width: 270px;
+}
+
+.form-check {
+  padding-left: 0;
+  font-size: 14.5px;
+  margin-bottom: 16px;
+}
+.form-check label {
+  margin-bottom: 0;
+}
+
+.submit-btn {
+  padding: 6px 12px;
+  background-color: #656e5e;
+  border: 1px solid #8c8273;
+  border-radius: 4px;
+  color: #fff;
+}
+.submit-btn:hover {
+  opacity: 0.9;
+}
+.submit-btn:active, .submit-btn:focus {
+  background-color: #596052;
+  outline: 0;
+}
+
+/* レスポンシブデザイン
+---------------------------------------------------------------------------- */
+/*medium
+-----------------------*/
+@media (max-width: 1025px) {
+  /*ヘッダー*/
+  .header-logo {
+    width: 95%;
+  }
+
+  /*メイン*/
+  .container {
+    width: 75%;
+  }
+}
+/*small
+-----------------------*/
+@media (max-width: 650px) {
+  body {
+    font-size: small;
+  }
+
+  /*ヘッダー*/
+  header {
+    height: 125px;
+    background-size: cover;
+  }
+
+  .header-logo a {
+    font-size: 50px;
+    bottom: -5px;
+  }
+
+  /*メイン*/
+  main {
+    margin: 25px 0;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .content-title {
+    font-size: 18px;
+    padding: 20px 0 10px 5px;
+  }
+
+  form {
+    margin: 20px 0;
+  }
+
+  .email, .password {
+    width: 90%;
+    padding-bottom: 8px;
+    margin: 0 auto;
+  }
+  .email label, .password label {
+    display: block;
+    text-align: start;
+    width: auto;
+    line-height: normal;
+  }
+  .email input, .password input {
+    width: 100%;
+    text-align: start;
+  }
+
+  .form-check {
+    width: 100%;
+    font-size: 12px;
+    margin-top: 8px;
+  }
+}

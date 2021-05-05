@@ -10,12 +10,12 @@ use App\User;
 
 class ConfigController extends Controller
 {
-    public function index()
+    public function account_config()
     {
         $id = Auth::id();
         $user = User::find($id);
         
-        return view('admin.account_config.index', [ 'user'=>$user ]);
+        return view('admin.account_config', [ 'user'=>$user ]);
     }
     
     public function delete($id)

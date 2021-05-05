@@ -91,73 +91,66 @@ header {
 }
 
 /* メイン
------------------------------------------------------------ */
+-------------------------------------------------------------- */
 main {
   margin: 50px 0;
 }
 
-.container {
-  width: 65%;
+.content-title {
+  width: 70%;
+  margin: 0 auto;
+  background: #f7f5f2;
+  border: 1px solid #8c8273;
+  border-radius: 6px;
+  font-size: 28px;
+  padding: 30px 0 10px 15px;
+}
+
+.favorite-wrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.favorite-user {
+  background: #f7f5f2;
+  display: flex;
+  border: 1px solid #8c8273;
+  border-radius: 6px;
+}
+.favorite-user .user-img {
+  width: 200px;
+  margin: 20px 0;
+  text-align: center;
+}
+.favorite-user img {
+  height: 130px;
+  width: 130px;
+  padding: 2px;
+  border: 1px solid #b0a99d;
+}
+.favorite-user:hover {
+  color: inherit;
+}
+
+.txt {
+  margin: 30px 20px;
+  flex: 1;
+}
+
+.user-name {
+  font-size: 24px;
+  color: #e66300;
+}
+
+.no-favorites {
+  width: 70%;
   background: #f7f5f2;
   margin: 0 auto;
   border: 1px solid #8c8273;
   border-radius: 6px;
-}
-
-.top {
-  display: flex;
-  padding: 30px 25px;
-  border-bottom: 1px solid #dbd6d3;
-}
-
-.book-img img {
-  width: 250px;
-  height: 290px;
-  padding: 2px;
-  border: 1px solid #b0a99d;
-  -o-object-fit: contain;
-     object-fit: contain;
-  margin-right: 40px;
-}
-
-.top-txt {
-  flex: 1;
-}
-
-.top-right {
-  text-align: right;
-  margin-bottom: 25px;
-}
-.top-right .edit-btn {
-  color: #e66300;
-  border-bottom: 5px solid #f7e3d4;
-}
-.top-right .edit-btn:hover {
-  color: #cc5800;
-  border-bottom: 5px solid #f6decb;
-}
-.top-right .edit-btn:active {
-  opacity: 0.9;
-}
-
-.date {
-  padding-left: 8px;
-}
-
-.book-title {
-  font-size: 30px;
-}
-
-.author,
-.subtitle {
-  font-size: 18px;
-  margin: 0;
-  padding-bottom: 8px;
-}
-
-.body {
-  padding: 25px;
-  line-height: 2.3;
+  text-align: center;
+  padding: 25px 0;
+  color: #a39b8f;
 }
 
 /* レスポンシブデザイン
@@ -171,7 +164,7 @@ main {
   }
 
   /*メイン*/
-  .container {
+  .content-title, .favorite-wrapper, .no-favorites {
     width: 90%;
   }
 }
@@ -276,43 +269,37 @@ main {
     margin: 25px 0;
   }
 
-  .container {
-    padding: 0;
+  .content-title {
+    font-size: 18px;
+    padding: 20px 0 10px 5px;
   }
 
-  .top {
-    display: block;
-    padding: 42px 20px 10px 20px;
-    text-align: center;
-    position: relative;
+  .favorite-user .user-img {
+    width: 110px;
+    margin: 15px 0;
+  }
+  .favorite-user img {
+    height: 90px;
+    width: 90px;
   }
 
-  .book-img {
-    padding-bottom: 8px;
-  }
-  .book-img img {
-    width: 200px;
-    height: 230px;
+  .txt {
     margin: 0;
+    padding: 18px 5px 15px 0;
   }
 
-  .book-title {
-    font-size: 20px;
-  }
-
-  .author,
-.subtitle {
-    font-size: small;
-  }
-
-  .top-right {
+  .user-name {
+    font-size: 16px;
     margin-bottom: 0;
-    position: absolute;
-    top: 8px;
-    right: 8px;
+    padding-bottom: 5px;
   }
 
-  .body {
-    padding: 15px 25px;
+  .introduction {
+    font-size: 10px;
+    margin-bottom: 0;
+  }
+
+  .no-favorites {
+    padding: 18px 0;
   }
 }

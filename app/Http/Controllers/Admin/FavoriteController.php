@@ -13,14 +13,14 @@ use Storage;
 
 class FavoriteController extends Controller
 {
-    public function index()
+    public function favorites()
     {
         $id = Auth::id();
         $user = User::find($id);
         
         $favorite_users = $user->favorite_users;
         
-        return view('admin.favorite.index', [ 'favorite_users'=>$favorite_users ]);
+        return view('admin.favorites', [ 'favorite_users'=>$favorite_users ]);
     }
     
     //お気に入り機能

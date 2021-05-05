@@ -17,10 +17,10 @@ Auth::routes();
 Route::get('/', 'HomeController@index');
 
 Route::get('/article', 'ArticleController@show');
-Route::get('/each-account', 'EachAccountController@index');
+Route::get('/each-account', 'EachAccountController@each_account');
 
 Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function(){
-    Route::get('account_config', 'Admin\ConfigController@index');
+    Route::get('account_config', 'Admin\ConfigController@account_config');
     Route::post('account_config/delete/{id}', 'Admin\ConfigController@delete')->name('account_delete');
     
     Route::get('profile/create', 'Admin\ProfileController@add');
@@ -35,11 +35,11 @@ Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function(){
     Route::post('article/edit', 'Admin\ArticleController@update');
     Route::post('article/delete/{id}', 'Admin\ArticleController@delete')->name('article_delete');
     
-    Route::get('mypage', 'Admin\MypageController@index');
+    Route::get('mypage', 'Admin\MypageController@mypage');
     
-    Route::get('favorite', 'Admin\FavoriteController@index');
+    Route::get('favorites', 'Admin\FavoriteController@favorites');
     
-    Route::get('bookmark', 'Admin\BookmarkController@index');
+    Route::get('bookmarks', 'Admin\BookmarkController@bookmarks');
 });
 
 //いいね・ブックマーク機能

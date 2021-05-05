@@ -2,7 +2,7 @@
 
 @section('title', 'お気に入りユーザー')
 
-@section('css')<link href="{{ mix('css/favorite.css') }}" rel="stylesheet">@endsection
+@section('css')<link href="{{ mix('css/favorites.css') }}" rel="stylesheet">@endsection
 
 @section('content')
 

@@ -2,7 +2,7 @@
 
 @section('title', 'ブックマーク')
 
-@section('css')<link href="{{ mix('css/bookmark.css') }}" rel="stylesheet">@endsection
+@section('css')<link href="{{ mix('css/bookmarks.css') }}" rel="stylesheet">@endsection
 
 @section('content')
     

@@ -1,1 +1,213 @@
-body{background-color:#f2e0c4;background-image:url(../image/Melamine-wood-005.png);font-size:medium}body,input{color:#574528}input{outline:0;background-color:#fbfaf9;padding:6px 12px;border:1px solid #dbd6d3;border-radius:4px}input::-moz-placeholder{color:#b0a99d;font-style:oblique}input:-ms-input-placeholder{color:#b0a99d;font-style:oblique}input::placeholder{color:#b0a99d;font-style:oblique}input:focus{border-color:#b5ac9f}input:-webkit-autofill{-webkit-box-shadow:0 0 0 1000px #e5e8e3 inset;-webkit-color:#2b2214}header{background-image:url(../image/IMG_5236.jpg);background-repeat:repeat-x;background-size:contain;height:150px}.header-logo{width:75%;margin:0 auto;height:100%;font-weight:400;position:relative}.header-logo a{position:absolute;bottom:-8px;color:#fff;font-size:75px;transform-origin:bottom;transform:scaleY(1.3)}.header-logo a:hover{text-decoration:none}main{margin:50px 0}.container{width:60%;background:#f7f5f2;margin:0 auto;border:1px solid #8c8273;border-radius:6px}.content-title{font-size:28px;padding:30px 0 10px 5px;border-bottom:1px solid #8c8273}form{text-align:center;margin:40px 0}.email,.name,.password,.password-confirm{margin-bottom:15px;justify-content:center}.email label,.name label,.password-confirm label,.password label{width:135px;display:inline-block;text-align:right;padding-right:20px;margin-bottom:0;line-height:39px}.email input,.name input,.password-confirm input,.password input{width:270px;outline:0;background-color:#fbfaf9;color:#574528;padding:6px 12px;border:1px solid #dbd6d3;border-radius:4px}.email input::-moz-placeholder,.name input::-moz-placeholder,.password-confirm input::-moz-placeholder,.password input::-moz-placeholder{color:#c4beb3;font-style:oblique}.email input:-ms-input-placeholder,.name input:-ms-input-placeholder,.password-confirm input:-ms-input-placeholder,.password input:-ms-input-placeholder{color:#c4beb3;font-style:oblique}.email input::placeholder,.name input::placeholder,.password-confirm input::placeholder,.password input::placeholder{color:#c4beb3;font-style:oblique}.email input:focus,.name input:focus,.password-confirm input:focus,.password input:focus{border-color:#b5ac9f}.email input:-webkit-autofill,.name input:-webkit-autofill,.password-confirm input:-webkit-autofill,.password input:-webkit-autofill{-webkit-box-shadow:0 0 0 1000px #e5e8e3 inset;-webkit-color:#2b2214}.submit-btn{padding:6px 12px;background-color:#656e5e;border:1px solid #8c8273;border-radius:4px;color:#fff;margin-top:8px}.submit-btn:hover{opacity:.9}.submit-btn:active,.submit-btn:focus{background-color:#596052;outline:0}@media (max-width:1025px){.header-logo{width:95%}.container{width:75%}}@media (max-width:650px){body{font-size:small}header{height:125px;background-size:cover}.header-logo a{font-size:50px;bottom:-5px}main{margin:25px 0}.container{width:90%}.content-title{font-size:18px;padding:20px 0 10px 5px}form{margin:20px 0}.email,.name,.password,.password-confirm{width:90%;padding-bottom:8px;margin:0 auto}.email label,.name label,.password-confirm label,.password label{display:block;text-align:start;width:auto;line-height:normal}.email input,.name input,.password-confirm input,.password input{width:100%;text-align:start}}
+@charset "UTF-8";
+body {
+  background-color: #f2e0c4;
+  background-image: url("../image/Melamine-wood-005.png");
+  color: #574528;
+  font-size: medium;
+}
+
+input {
+  outline: 0;
+  background-color: #fbfaf9;
+  color: #574528;
+  padding: 6px 12px;
+  border: 1px solid #dbd6d3;
+  border-radius: 4px;
+}
+input::-moz-placeholder {
+  color: #b0a99d;
+  font-style: oblique;
+}
+input:-ms-input-placeholder {
+  color: #b0a99d;
+  font-style: oblique;
+}
+input::placeholder {
+  color: #b0a99d;
+  font-style: oblique;
+}
+input:focus {
+  border-color: #b5ac9f;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #e5e8e3 inset;
+  -webkit-color: #2b2214;
+}
+
+/* ヘッダー 
+-------------------------------------------------*/
+header {
+  background-image: url("../image/IMG_5236.jpg");
+  background-repeat: repeat-x;
+  background-size: contain;
+  height: 150px;
+}
+
+.header-logo {
+  width: 75%;
+  margin: 0 auto;
+  height: 100%;
+  font-weight: normal;
+  position: relative;
+}
+.header-logo a {
+  position: absolute;
+  bottom: -8px;
+  color: #fff;
+  font-size: 75px;
+  transform-origin: bottom;
+  transform: scaleY(1.3);
+}
+.header-logo a:hover {
+  text-decoration: none;
+}
+
+/* メイン
+---------------------------------------------------- */
+main {
+  margin: 50px 0;
+}
+
+.container {
+  width: 60%;
+  background: #f7f5f2;
+  margin: 0 auto;
+  border: 1px solid #8c8273;
+  border-radius: 6px;
+}
+
+.content-title {
+  font-size: 28px;
+  padding: 30px 0 10px 5px;
+  border-bottom: 1px solid #8c8273;
+}
+
+form {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.name, .email, .password, .password-confirm {
+  margin-bottom: 15px;
+  justify-content: center;
+}
+.name label, .email label, .password label, .password-confirm label {
+  width: 135px;
+  display: inline-block;
+  text-align: right;
+  padding-right: 20px;
+  margin-bottom: 0;
+  line-height: 39px;
+}
+.name input, .email input, .password input, .password-confirm input {
+  width: 270px;
+  outline: 0;
+  background-color: #fbfaf9;
+  color: #574528;
+  padding: 6px 12px;
+  border: 1px solid #dbd6d3;
+  border-radius: 4px;
+}
+.name input::-moz-placeholder, .email input::-moz-placeholder, .password input::-moz-placeholder, .password-confirm input::-moz-placeholder {
+  color: #c4beb3;
+  font-style: oblique;
+}
+.name input:-ms-input-placeholder, .email input:-ms-input-placeholder, .password input:-ms-input-placeholder, .password-confirm input:-ms-input-placeholder {
+  color: #c4beb3;
+  font-style: oblique;
+}
+.name input::placeholder, .email input::placeholder, .password input::placeholder, .password-confirm input::placeholder {
+  color: #c4beb3;
+  font-style: oblique;
+}
+.name input:focus, .email input:focus, .password input:focus, .password-confirm input:focus {
+  border-color: #b5ac9f;
+}
+.name input:-webkit-autofill, .email input:-webkit-autofill, .password input:-webkit-autofill, .password-confirm input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #e5e8e3 inset;
+  -webkit-color: #2b2214;
+}
+
+.submit-btn {
+  padding: 6px 12px;
+  background-color: #656e5e;
+  border: 1px solid #8c8273;
+  border-radius: 4px;
+  color: #fff;
+  margin-top: 8px;
+}
+.submit-btn:hover {
+  opacity: 0.9;
+}
+.submit-btn:active, .submit-btn:focus {
+  background-color: #596052;
+  outline: 0;
+}
+
+/* レスポンシブデザイン
+---------------------------------------------------------------------------- */
+/*medium
+-----------------------*/
+@media (max-width: 1025px) {
+  /*ヘッダー*/
+  .header-logo {
+    width: 95%;
+  }
+
+  /*メイン*/
+  .container {
+    width: 75%;
+  }
+}
+/*small
+-----------------------*/
+@media (max-width: 650px) {
+  body {
+    font-size: small;
+  }
+
+  /*ヘッダー*/
+  header {
+    height: 125px;
+    background-size: cover;
+  }
+
+  .header-logo a {
+    font-size: 50px;
+    bottom: -5px;
+  }
+
+  /*メイン*/
+  main {
+    margin: 25px 0;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .content-title {
+    font-size: 18px;
+    padding: 20px 0 10px 5px;
+  }
+
+  form {
+    margin: 20px 0;
+  }
+
+  .name, .email, .password, .password-confirm {
+    width: 90%;
+    padding-bottom: 8px;
+    margin: 0 auto;
+  }
+  .name label, .email label, .password label, .password-confirm label {
+    display: block;
+    text-align: start;
+    width: auto;
+    line-height: normal;
+  }
+  .name input, .email input, .password input, .password-confirm input {
+    width: 100%;
+    text-align: start;
+  }
+}

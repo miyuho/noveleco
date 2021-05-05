@@ -12,7 +12,7 @@ use Storage;
 
 class MypageController extends Controller
 {
-    public function index(Request $request)
+    public function mypage(Request $request)
     {
         $id = Auth::id();
         $user = User::find($id);
@@ -22,7 +22,7 @@ class MypageController extends Controller
         
         $articles = Article::where('user_id', $id)->orderBy('created_at','desc')->get();
         
-        return view('admin.mypage.index', [ 'user'=>$user, 'articles'=>$articles ]);
+        return view('admin.mypage', [ 'user'=>$user, 'articles'=>$articles ]);
     }
     
 }

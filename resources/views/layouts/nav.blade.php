@@ -40,10 +40,10 @@
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="{{ action('Admin\MypageController@index') }}">マイページ</a>
-                                    <a class="dropdown-item" href="{{ action('Admin\BookmarkController@index') }}">ブックマーク</a>
-                                    <a class="dropdown-item" href="{{ action('Admin\FavoriteController@index') }}">お気に入りユーザー</a>
-                                    <a class="dropdown-item" href="{{ action('Admin\ConfigController@index') }}">アカウント設定</a>
+                                    <a class="dropdown-item" href="{{ action('Admin\MypageController@mypage') }}">マイページ</a>
+                                    <a class="dropdown-item" href="{{ action('Admin\BookmarkController@bookmarks') }}">ブックマーク</a>
+                                    <a class="dropdown-item" href="{{ action('Admin\FavoriteController@favorites') }}">お気に入りユーザー</a>
+                                    <a class="dropdown-item" href="{{ action('Admin\ConfigController@account_config') }}">アカウント設定</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
                                         ログアウト
@@ -78,10 +78,10 @@
                             <h1 class="auth-name">{{ Auth::user()->name }}</h1>
                             <ul class="sp-nav">
                                 <li><a class="sp-link" href="{{ action('Admin\ArticleController@add') }}">投稿する</a></li>
-                                <li><a class="sp-link" href="{{ action('Admin\MypageController@index') }}">マイページ</a></li>
-                                <li><a class="sp-link" href="{{ action('Admin\BookmarkController@index') }}">ブックマーク</a></li>
-                                <li><a class="sp-link" href="{{ action('Admin\FavoriteController@index') }}">お気に入りユーザー</a></li>
-                                <li><a class="sp-link" href="{{ action('Admin\ConfigController@index') }}">アカウント設定</a></li>
+                                <li><a class="sp-link" href="{{ action('Admin\MypageController@mypage') }}">マイページ</a></li>
+                                <li><a class="sp-link" href="{{ action('Admin\BookmarkController@bookmarks') }}">ブックマーク</a></li>
+                                <li><a class="sp-link" href="{{ action('Admin\FavoriteController@favorites') }}">お気に入りユーザー</a></li>
+                                <li><a class="sp-link" href="{{ action('Admin\ConfigController@account_config') }}">アカウント設定</a></li>
                                 <li>
                                     <a class="sp-link" href="{{ route('logout') }}" onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">

@@ -10,7 +10,7 @@ use Storage;
 
 class EachAccountController extends Controller
 {
-    public function index(Request $request)
+    public function each_account(Request $request)
     {
         $each_account = User::find($request->id);
         if (empty($each_account)) {
