@@ -10,7 +10,7 @@
     
     <div class="favorite-wrapper">
         @foreach ( $favorite_users as $favorite_user )
-        <a class="favorite-user" href="{{ action('EachAccountController@index', ['id' => $favorite_user->id]) }}">
+        <a class="favorite-user" href="{{ action('EachAccountController@each_account', ['id' => $favorite_user->id]) }}">
             
             <div class="user-img">
                 @if ( $favorite_user->icon_image_path != null )

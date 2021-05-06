@@ -20,7 +20,7 @@
         <div class="top-txt">
             
             <div class="user">
-                <a href="{{ action('EachAccountController@index', ['id' => $user->id]) }}">
+                <a href="{{ action('EachAccountController@each_account', ['id' => $user->id]) }}">
                     <img class="icon" src="{{ $user->icon_image_path }}">
                     <span class="name">{{ $user->name }}</span>
                 </a>
