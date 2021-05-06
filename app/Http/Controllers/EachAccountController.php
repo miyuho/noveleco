@@ -19,6 +19,6 @@ class EachAccountController extends Controller
         
         $articles = Article::where('user_id', $each_account->id)->orderBy('created_at','desc')->get();
         
-        return view('each_account.index', [ 'each_account'=>$each_account, 'articles'=>$articles ]);
+        return view('each_account', [ 'each_account'=>$each_account, 'articles'=>$articles ]);
     }
 }
