@@ -16,7 +16,7 @@
             @endif
         </div>
         
-        <div class="profile-right">
+        <div class="profile-content">
             <div class="action">
                 <favorite :initial-is-favorite='@json($each_account->isFavorite(Auth::user()))'
                           :initial-count-favorites='@json($each_account->count_favorites)'
@@ -39,7 +39,7 @@
         @foreach ( $articles as $article )
         <a class="article" href="{{ action('ArticleController@show', ['id' => $article->id]) }}">
             
-            <div class="article-item">
+            <div class="article-img">
                 @if ( $article->book_image_path != null )
                     <img src="{{ $article->book_image_path }}" alt="本の画像">
                 @else

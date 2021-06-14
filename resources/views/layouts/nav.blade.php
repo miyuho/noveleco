@@ -30,10 +30,10 @@
                     
                     <ul class="header-right">
                         @guest
-                            <li class="nav-link pr-4"><a href="{{ route('register') }}">アカウント作成</a></li>
+                            <li class="nav-link"><a href="{{ route('register') }}">アカウント作成</a></li>
                             <li class="nav-link"><a href="{{ route('login') }}">ログイン</a></li>
                         @else
-                            <li class="nav-link pr-4"><a href="{{ action('Admin\ArticleController@add') }}">投稿する</a></li>
+                            <li class="nav-link"><a href="{{ action('Admin\ArticleController@add') }}">投稿する</a></li>
                             
                             <li class="dropdown nav-link">
                                 <a class="dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -83,11 +83,8 @@
                                 <li><a class="sp-link" href="{{ action('Admin\FavoriteController@favorites') }}">お気に入りユーザー</a></li>
                                 <li><a class="sp-link" href="{{ action('Admin\ConfigController@account_config') }}">アカウント設定</a></li>
                                 <li>
-                                    <a class="sp-link" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                            document.getElementById('logout-form').submit();">
-                                        ログアウト
-                                    </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                    <form action="{{ route('logout') }}" method="POST">
+                                        <button class="sp-link sp-logout">ログアウト</button>
                                         @csrf
                                     </form>
                                 </li>

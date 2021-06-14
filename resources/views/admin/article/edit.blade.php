@@ -12,14 +12,6 @@
     <form action="{{ action('Admin\ArticleController@update') }}" method="post" enctype="multipart/form-data">
         @csrf
         
-        @if( count($errors) > 0 )
-          <ul class="pt-3">
-            @foreach( $errors->all() as $e )
-                <li class="error-message">{{ $e }}</li>
-            @endforeach
-          </ul>
-        @endif
-        
         <div class="top">
             <div>
                 <label class="select-img">
@@ -38,19 +30,19 @@
                 
             <div class="top-txt">
                 <div class="book_title">
-                    <input type="text" placeholder="本のタイトル" name="book_title" value="{{ $article_form->book_title }}">
+                    <input type="text" placeholder="本のタイトル" name="book_title" value="{{ $article_form->book_title }}" required>
                 </div>
                 <div class="author">
-                    <input type="text" placeholder="著者" name="author" value="{{ $article_form->author }}">
+                    <input type="text" placeholder="著者" name="author" value="{{ $article_form->author }}" required>
                 </div>
                 <div class="subtitle">
-                    <input type="text" placeholder="記事のタイトル" name="subtitle" value="{{ $article_form->subtitle }}">
+                    <input type="text" placeholder="記事のタイトル" name="subtitle" value="{{ $article_form->subtitle }}" required>
                 </div>
             </div>
         </div>
         
-        <div class="below">
-            <textarea class="body" rows="30" placeholder="" name="body">{{ $article_form->body }}</textarea>
+        <div class="bottom">
+            <textarea class="body" rows="30" placeholder="" name="body" required>{{ $article_form->body }}</textarea>
             
             <input type="hidden" name="id" value="{{ $article_form->id }}">
             <button type="submit" class="submit-btn">

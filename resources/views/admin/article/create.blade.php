@@ -12,14 +12,6 @@
     <form action="{{ action('Admin\ArticleController@create') }}" method="post" enctype="multipart/form-data">
         @csrf
         
-        @if( count($errors) > 0 )
-          <ul class="pt-3">
-            @foreach( $errors->all() as $e )
-                <li class="error-message">{{ $e }}</li>
-            @endforeach
-          </ul>
-        @endif
-        
         <div class="top">
             
             <label class="select-img">
@@ -29,19 +21,19 @@
             
             <div class="top-txt">
                 <div class="book_title">
-                    <input type="text" placeholder="本のタイトル" name="book_title" value="{{ old('book_title') }}">
+                    <input type="text" placeholder="本のタイトル" name="book_title" value="{{ old('book_title') }}" required>
                 </div>
                 <div class="author">
-                    <input type="text" placeholder="著者" name="author" value="{{ old('author') }}">
+                    <input type="text" placeholder="本の著者" name="author" value="{{ old('author') }}" required>
                 </div>
                 <div class="subtitle">
-                    <input type="text" placeholder="記事のタイトル" name="subtitle" value="{{ old('subtitle') }}">
+                    <input type="text" placeholder="記事のタイトル" name="subtitle" value="{{ old('subtitle') }}" required>
                 </div>
             </div>
         </div>
         
-        <div class="below">
-            <textarea class="body" rows="30" placeholder="" name="body" value="{{ old('body') }}"></textarea>
+        <div class="bottom">
+            <textarea class="body" rows="30" placeholder="おすすめポイントを記入しましょう！" name="body" value="{{ old('body') }}" required></textarea>
             <button type="submit" class="submit-btn">
                 投稿する
             </button>

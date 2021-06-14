@@ -19,7 +19,7 @@
         @foreach ( $articles as $article )
             <a class="article" href="{{ action('ArticleController@show', ['id' => $article->id]) }}">
                 
-                <div class="article-item">
+                <div class="article-img">
                     @if ( $article->book_image_path != null )
                         <img src="{{ $article->book_image_path }}" alt="本の画像">
                     @else

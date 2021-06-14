@@ -1,8 +1,8 @@
 body {
+  font-size: 100%;
+  color: hsl(37, 37%, 25%);
   background-color: #f2e0c4;
   background-image: url("../image/Melamine-wood-005.png");
-  color: hsl(37, 37%, 25%);
-  font-size: medium;
 }
 
 a {
@@ -49,7 +49,7 @@ header {
       position: absolute;
       bottom: -8px;
       color: #fff;
-      font-size: 75px;
+      font-size: 4.68rem;
       transform-origin: bottom;
       transform: scaleY(1.3);
     }
@@ -63,7 +63,7 @@ header {
   
   li > a {
     color: #fff;
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
  
@@ -95,27 +95,27 @@ header {
 /* メイン
 ---------------------------------------------------------------------- */
 main {
-  margin: 50px 0;
+  padding: 50px 0;
 }
 
 /* プロフィール */
 .profile {
     width: 70%;
-    background: #f0eee9;
+    background: #f7f5f2;
     margin: 0 auto;
     border: 1px solid #8c8273;
     border-radius: 6px;
     border-bottom: 3px solid #572828;
     
     display: flex;
-    padding: 30px 25px 40px 25px;
+    padding: 30px 30px 40px 30px;
 }
 
 .action {
     text-align: right;
 }
 .action-icon {
-  font-size: 30px;
+  font-size: 1.875rem;
   color: #bababa;
   
   &:hover {
@@ -131,27 +131,36 @@ main {
 }
 
 .user-img {
+  width: 280px;
+  height: 280px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-right: 40px;
+  position: relative;
     img {
-        width: 250px;
-        height: 290px;
-        padding: 2px;
-        border: 1px solid #b09e99;
-        object-fit: contain;
-        margin-right: 40px;
+      max-width: 90%;
+      max-height: 90%;
+      padding: 2px;
+      background-color: #fff;
+      border: 1px solid #b09e99;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
 }
 
-.profile-right {
+.profile-content {
     flex: 1;
     color: #572828;
 }
 
 .user-name {
-    font-size: 32px;
+    font-size: 2rem;
     color: #ad2b00;
 }
 .introduction {
-    font-size: 18px;
+    font-size: 1.125rem;
     margin: 0;
 }
 
@@ -173,22 +182,25 @@ main {
 }
 
 .article {
-  background: #f7f5f2;
+  background: #f7f5f5;
   border: 1px solid #8c8273;
   border-radius: 6px;
   display: flex;
+  align-items: center;
+  padding: 20px 30px;
   
-  .article-item {
-    width: 230px;
-    margin: 25px auto;
-    text-align: center;
+  .article-img {
+    width: 170px;
+    height: 170px;
+    margin-right: 40px;
   }
   img {
-    height: 170px;
-    width: 170px;
+    height: 100%;
+    width: 100%;
     padding: 2px;
+    background-color: #fff;
     border: 1px solid #b0a99d;
-    object-fit: contain;
+    object-fit: cover;
   }
   
   &:hover {
@@ -196,11 +208,13 @@ main {
   }
 }
 .article-txt {
-  margin: 30px 20px;
   flex: 1;
   
   p {
     margin-bottom: 8px;
+  }
+  :last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -212,8 +226,7 @@ main {
 }
 
 .no-articles {
-  width: 70%;
-  background: #f7f5f2;
+  background: #f7f5f5;
   margin: 0 auto;
   border: 1px solid #8c8273;
   border-radius: 6px;
@@ -243,7 +256,7 @@ main {
 -----------------------*/
   @media (max-width: 650px) {
   body {
-    font-size: small;
+    font-size: 0.8rem;
   }
   /*ヘッダー*/
   header {
@@ -252,7 +265,7 @@ main {
   }
   .header-logo {
     a {
-     font-size: 50px;
+     font-size: 3.1rem;
      bottom: -5px;
     }
   }
@@ -263,7 +276,7 @@ main {
   
   .menu-icon {
     display: block;
-    font-size: 32px;
+    font-size: 2rem;
     color: #fff;
     align-self: flex-end;
     cursor: pointer;
@@ -273,7 +286,7 @@ main {
     position: absolute;
     top: 50px;
     right: 10px;
-    font-size: 35px;
+    font-size: 2.2rem;
     cursor: pointer;
   }
   
@@ -304,7 +317,7 @@ main {
   }
   
   .overlay .auth-name {
-    font-size: 14px;
+    font-size: 0.875rem;
     border-bottom: 1px solid #c4beb3;
     padding: 75px 0 2px 5px;
     margin-bottom: 0;
@@ -335,16 +348,25 @@ main {
       opacity: 0.9;
     }
   }
+  .sp-logout {
+    color: inherit;
+    background-color: inherit;
+    border: none;
+    
+    &:active, &:focus {
+    outline: 0;
+    }
+  }
   
   /*メイン
   ------------------------------*/
   main {
-    margin: 25px 0;
+    padding: 25px 0;
   }
   
   /*プロフィール*/
   .profile {
-    display: block;
+    flex-direction: column;
     padding: 40px 20px 30px 20px;
     text-align: center;
     position: relative;
@@ -352,58 +374,56 @@ main {
   
   .action-icon {
     position: absolute;
-    top: -3px;
-    right: 4px;
+    top: 10px;
+    right: 15px;
   }
   
   .user-img {
-    text-align: center;
-    padding-bottom: 8px;
-    img {
-      width: 200px;
-      height: 230px;
-      margin: 0;
-    }
+    width: 220px;
+    height: 220px;
+    margin-right: 0;
+    margin: 0 auto;
   }
   
   .user-name {
-    font-size: 20px;
+    font-size: 1.25rem;
+    margin: 8px 0;
   }
   .introduction {
-    font-size: small;
+    font-size: 0.8rem;
   }
   
   /*投稿記事*/
   .article {
-    display: block;
-    text-align: center;
-    padding: 20px 15px 15px 15px;
-    position: relative;
+    flex-direction: column;
+    padding: 20px;
     
-    .article-item {
-      width: 100%;
-      margin: 0;
-    }
-    
-    img {
-      height: 130px;
+    .article-img {
       width: 130px;
+      height: 130px;
+      margin-right: 0;
+      margin-bottom: 10px;
     }
   }
   
   .article-txt {
-    margin: 0;
+    text-align: center;
+    
     p {
-      font-size: 10px;
+      font-size: 0.625rem;
       margin-bottom: 0;
     }
   }
+  
   .book-title {
-    font-size: 16px;
+    font-size: 1rem;
     margin-bottom: 0;
-    padding-top: 10px;
   }
   .subtitle {
     padding-bottom: 5px;
+  }
+  
+  .no-articles {
+    padding: 18px 0;
   }
 }

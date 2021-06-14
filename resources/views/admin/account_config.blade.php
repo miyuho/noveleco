@@ -17,7 +17,7 @@
         
         <div class="item-contents">
             <p class="mb-0">アカウントを削除すると、投稿した記事など、全てのデータが削除されます。</p>
-            <p class="caution">一度削除すると元には戻せませんのでご注意下さい。</p>
+            <strong class="caution">一度削除すると元には戻せませんのでご注意下さい。</strong>
             
             <p>ログイン中ユーザー：{{$user->name}}</p>
             <input class="submit-btn" type="submit" value="アカウントを削除する" onclick="return confirm('ユーザー名：{{$user->name}} を削除して宜しいですか？');">

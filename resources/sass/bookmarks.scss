@@ -1,8 +1,8 @@
 body {
+  font-size: 100%;
+  color: hsl(37, 37%, 25%);
   background-color: #f2e0c4;
   background-image: url("../image/Melamine-wood-005.png");
-  color: hsl(37, 37%, 25%);
-  font-size: medium;
 }
 
 a {
@@ -49,7 +49,7 @@ header {
       position: absolute;
       bottom: -8px;
       color: #fff;
-      font-size: 75px;
+      font-size: 4.68rem;
       transform-origin: bottom;
       transform: scaleY(1.3);
     }
@@ -63,7 +63,7 @@ header {
   
   li > a {
     color: #fff;
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
  
@@ -94,17 +94,17 @@ header {
 /* メイン
 -------------------------------------------------------------- */
 main {
-  margin: 50px 0;
+  padding: 50px 0;
 }
 
 .content-title {
   width: 70%;
   margin: 0 auto;
-  background: #f7f5f2;
+  background: #f7f5f5;
   border: 1px solid #8c8273;
   border-radius: 6px;
   
-  font-size: 28px;
+  font-size: 1.75rem;
   padding: 30px 0 10px 15px;
 }
 
@@ -114,22 +114,25 @@ main {
 }
 
 .article {
-  background: #f7f5f2;
-  display: flex;
+  background: #f7f5f5;
   border: 1px solid #8c8273;
   border-radius: 6px;
+  display: flex;
+  align-items: center;
+  padding: 20px 30px;
   
-  .article-item {
-    width: 230px;
-    margin: 25px auto;
-    text-align: center;
+  .article-img {
+    width: 170px;
+    height: 170px;
+    margin-right: 40px;
   }
   img {
-    height: 170px;
-    width: 170px;
+    height: 100%;
+    width: 100%;
     padding: 2px;
+    background-color: #fff;
     border: 1px solid #b0a99d;
-    object-fit: contain;
+    object-fit: cover;
   }
   
   &:hover {
@@ -137,11 +140,13 @@ main {
   }
 }
 .article-txt {
-  margin: 30px 20px;
   flex: 1;
   
   p {
     margin-bottom: 8px;
+  }
+  :last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -153,8 +158,7 @@ main {
 }
 
 .no-articles {
-  width: 70%;
-  background: #f7f5f2;
+  background: #f7f5f5;
   margin: 0 auto;
   border: 1px solid #8c8273;
   border-radius: 6px;
@@ -184,7 +188,7 @@ main {
 -----------------------*/
 @media (max-width: 650px) {
   body {
-    font-size: small;
+    font-size: 0.8rem;
   }
   
   /*ヘッダー*/
@@ -194,7 +198,7 @@ main {
   }
   .header-logo {
     a {
-     font-size: 50px;
+     font-size: 3.1rem;
      bottom: -5px;
     }
   }
@@ -205,7 +209,7 @@ main {
   
   .menu-icon {
     display: block;
-    font-size: 32px;
+    font-size: 2rem;
     color: #fff;
     align-self: flex-end;
     cursor: pointer;
@@ -215,7 +219,7 @@ main {
     position: absolute;
     top: 50px;
     right: 10px;
-    font-size: 35px;
+    font-size: 2.2rem;
     cursor: pointer;
   }
   
@@ -246,7 +250,7 @@ main {
   }
   
   .overlay .auth-name {
-    font-size: 14px;
+    font-size: 0.875rem;
     border-bottom: 1px solid #c4beb3;
     padding: 75px 0 2px 5px;
     margin-bottom: 0;
@@ -265,7 +269,6 @@ main {
     }
   }
   .overlay .sp-link {
-    
     width: 100%;
     height: 100%;
     
@@ -277,10 +280,19 @@ main {
       opacity: 0.9;
     }
   }
+  .sp-logout {
+    color: inherit;
+    background-color: inherit;
+    border: none;
+    
+    &:active, &:focus {
+    outline: 0;
+    }
+  }
   
   /*メイン*/
   main {
-    margin: 25px 0;
+    padding: 25px 0;
   }
   
   .content-title {
@@ -289,32 +301,29 @@ main {
   }
   
   .article {
-    display: block;
-    text-align: center;
-    padding: 20px 15px 15px 15px;
+    flex-direction: column;
+    padding: 20px;
     
-    .article-item {
-      width: 100%;
-      margin: 0;
-    }
-    
-    img {
-      height: 130px;
+    .article-img {
       width: 130px;
+      height: 130px;
+      margin-right: 0;
+      margin-bottom: 10px;
     }
   }
   
   .article-txt {
-    margin: 0;
+    text-align: center;
+    
     p {
-      font-size: 10px;
+      font-size: 0.625rem;
       margin-bottom: 0;
     }
   }
+  
   .book-title {
-    font-size: 16px;
+    font-size: 1rem;
     margin-bottom: 0;
-    padding-top: 10px;
   }
   .subtitle {
     padding-bottom: 5px;

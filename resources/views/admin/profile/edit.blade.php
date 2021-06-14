@@ -37,7 +37,7 @@
                     <textarea class="form-control" name="introduction">{{ $user_form->introduction }}</textarea>
                 @else
                     <textarea class="form-control" name="introduction" 
-                        placeholder="自己紹介文：どんな本が好きなのか等記入して、プロフィールを公開してみましょう。" >{{ $user_form->introduction }}</textarea>
+                        placeholder="自己紹介文：どんな本が好きなのか等、あなたのプロフィールを公開してみましょう。" >{{ $user_form->introduction }}</textarea>
                 @endif
             </div>
             

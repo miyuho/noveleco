@@ -23,7 +23,7 @@
             <div class="text">
                 <h2 class="user-name">{{ Auth::user()->name }}</h2>
                 <textarea class="introduction" name="introduction" value="{{ old('introduction') }}" 
-                    placeholder="自己紹介文：どんな本が好きなのか等記入して、プロフィールを公開してみましょう。" ></textarea>
+                    placeholder="自己紹介文：どんな本が好きなのか等、あなたのプロフィールを公開してみましょう。" ></textarea>
             </div>
             
         </div>
