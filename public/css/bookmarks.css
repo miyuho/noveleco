@@ -156,6 +156,7 @@ main {
 }
 
 .no-articles {
+  width: 70%;
   background: #f7f5f5;
   margin: 0 auto;
   border: 1px solid #8c8273;
